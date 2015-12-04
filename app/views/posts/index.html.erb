@@ -1,0 +1,22 @@
+<h1>Posts#index1</h1>
+Find me in app/views/posts/index.html.erb
+<p>
+<h1><%= @page %> </h1>
+</p>
+
+<table>
+<tr>
+<td>Name </td>
+<td>Id </td>
+</tr>
+<% @posts.each do |post| %>
+  <tr>
+  <td>
+	<%= post.name %> 
+  </td>
+  <td>
+	<%= post.id %> 
+  </td>
+  </tr>
+<% end %>
+</table>
