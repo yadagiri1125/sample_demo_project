@@ -15,7 +15,7 @@ namespace :update_zip_codes do
     # approved_element = xml.xpath('//approved').first
     # approved_element ? approved_element.inner_text : 0
 
-    @request_zipcode = open("http://api.zip-codes.com/ZipCodesAPI.svc/1.0/GetAllZipCodes?country=US&key=B71MEA82AB73FBZH3WUB").read
+     = open("http://api.zip-codes.com/ZipCodesAPI.svc/1.0/GetAllZipCodes?country=US&key=B71MEA82AB73FBZH3WUB").read
     @zip_codes = @request_zipcode.split(" ")
     @zip_codes.map!{ |element| element.gsub(/"/, '') }
     @zip_codes.map!{ |element| element.gsub(/,/, '') }

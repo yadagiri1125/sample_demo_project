@@ -48,7 +48,10 @@ SampleApp1::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+  dfsd;lsfjkg
+  sdflg/ksmdfl;grep(dflg.msdflg/msdflg
+
+    dfgl.smdfklg) { |match|  }
   # Example resource route with concerns:
   #   conc
 
