@@ -1,0 +1,911 @@
+1. 8 controller models migrations  views routes and teir mapping
+2.rake task
+3. push code base to git
+4.deploy dms inspect date,mverso,venuedog
+
+
+To install JDK and JRE in ubuntu
+1.sudo add-apt-repository ppa:webupd8team/java
+2.sudo apt-get update
+3.sudo apt-get install oracle-java7-installer
+
+To install rubymine in ubuntu
+1.download rubymine from https://www.jetbrains.com/ruby/download/
+2. extract it
+3.open terminal cd Downloads
+4. cd /home/satish/Downloads/RubyMine-7.1.4/bin
+5. ./rubymine.sh
+
+
+To install  Sublime-Text-3:
+ 1.sudo add-apt-repository ppa:webupd8team/sublime-text-3
+ 2.sudo apt-get update
+ 3.sudo apt-get install sublime-text-installer
+
+Usage of sublime
+  1.subl .
+
+To install mysql in ubuntu
+ sudo apt-get install mysql-server
+
+To install Mysql workbench
+
+ sudo apt-get install mysql-workbench
+
+To restart mysql server
+ sudo service mysql restart
+
+To stop mysql server
+ sudo service mysql stop
+
+ To start mysql server
+ sudo service mysql start
+
+To login in mysql database
+ mysql -u root -p
+
+
+Some use mysql commands
+  show databases;
+  use database_name;
+  show databases;
+  show tables;
+
+To stop mysql server
+ sudo service mysql start
+
+to exit from mysql server
+ exit
+
+Steps to install git on ubuntu
+
+1. install development tolls
+   sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
+2.install git
+  sudo apt-get install git-core
+
+3. configure the git usename and email id(sudo nano ~/.gitconfig)
+
+   git config --global user.name "yadagiri1125"
+   git config --global user.email yadagiri1125@example.com
+4.git config --list
+
+1. rvm instllation
+    1.sudo apt-get install curl #it will install curl
+    2.\curl -sSL https://get.rvm.io | bash -s stable
+    3.gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 #if you get error in step2
+
+project1 1.9.3  3.2.3
+project2 2.0.0  4.0.0
+
+
+
+1.8.7  --- 2.x
+1.9.3  --- 3.x
+2.0.0  --- 4.x
+
+git clone https://github.com/yadagiri1125/dails_updates.git
+username:
+pass:
+cd dails_updates
+
+projectct1::
+
+  rvm install 1.9.3
+  rvm use 1.9.3
+  rvm gemset create project1
+  gem install rails -v 3.2.3
+  bundle install
+  edit config file metion database name , username and pass
+  rake db:create
+  rake db:migrate
+  rake db:seed / load dumps
+
+projectct2::
+
+    rvm install 2.0.0
+    rvm use 2.0.0
+    rvm gemset create project2
+    gem install rails -v 4.0.0
+    bundle install
+    edit config/database.yml metion database name , username and pass
+    rake db:create
+    rake db:migrate
+    rake db:seed / load dumps
+
+to work project1 
+
+   rvm use 1.9.3
+   rvm gemset use project1
+   rails s -p 3002
+   in browser localhost:3002
+
+to work project2
+
+  rvm use 2.0.0
+  rvm gemset use project2
+  rails s
+  in browser localhost:3000
+
+
+
+
+2. ruby version on it
+   rvm -v -- give version of rvm insalled
+   rvm list  -- list all the ruby versions installed on ubunu machine
+   rvm install 1.9.3  -- installs ruby version 1.9.3
+   qrvm install 1.8.7  --
+   rvm install 2.0.0  --
+
+   rvm list
+   rvm use 1.9.3  -- used select ruby version 1.9.3
+   ruby -v   -- it will gives 1.9.3
+   rvm use 2.0.0
+   ruby -v --it will give 2.0.0
+   rvm use 1.8.7
+   ruby -v  -- will give 1.8.7
+   
+  1.   install 2.3.5,3.2.3,4.0.0 rails versions in ruby 1.9.3 by creating proper gemsets
+   
+   rvm use 1.9.3   -- used select ruby 1.9.3
+   rvm gemset create rails2  -- create a gemset for rails2
+   rvm gemset use rails2 -- select the gemset for rails2
+   gem  install rails -v '2.3.5'
+
+   rvm gemset create rails3  -- create a gemset for rails3
+   rvm gemset use rails3 -- select the gemset for rails3
+   gem  install rails -v '3.2.3'
+
+   rvm gemset create rails4  -- create a gemset for rails2
+   rvm gemset use rails4 -- select the gemset for rails2
+   gem  install rails -v '4.0.0'
+
+  2. inatsall 3.2.3 , 4.0.0,4.1.0 rails versions in ruby 2.0.0 using proper gemsets
+
+      rvm use 2.0.0   -- used select ruby 2.0.0
+   rvm gemset create rails3 -- create a gemset for rails2
+   rvm gemset use rails3 -- select the gemset for rails2
+   gem  install rails -v '3.2.3'
+
+   rvm gemset create rails4  -- create a gemset for rails3
+   rvm gemset use rails4 -- select the gemset for rails3
+   gem  install rails -v '4.0.0'
+
+   rvm gemset create rails41  -- create a gemset for rails2
+   rvm gemset use rails41 -- select the gemset for rails2
+   gem  install rails -v '4.1.0'
+
+
+  3. install 2.3.5, 2.8.7 and 3.0.0 rails versions in ruby 1.8.7 using proper gemsets
+
+    rvm use 1.8.7   -- used select ruby 1.8.7
+    rvm gemset create rails2
+   rvm gemset use rails2 -- select the gemset for rails2
+   gem  install rails -v '2.3.5'
+
+   rvm gemset create rails28  -- create a gemset for rails28
+   rvm gemset use rails28 -- select the gemset for rails28
+   gem  install rails -v '2.8.7'
+
+   rvm gemset create rails3  -- create a gemset for rails3
+   rvm gemset use rails3 -- select the gemset for rails3
+   gem  install rails -v '3.0.0'
+
+
+
+3.installation of rails versions
+4.installation of mysql and postgres
+5. installations of ides like rubymine,netbeans,sublime
+
+#git commands
+
+git init -- to initialize empty git repository
+
+git status -- to the status of orking directory
+
+git add .  -- used to add untracked files
+
+git commit -am "messagehere" -- this command is used to commit the changes
+
+git push origin branch_name -- used to push locally commited changes to specific branch
+
+
+git branch --all   -- lists all the branches in the repository
+
+git branch  -- will gives list of active branches
+
+git checkout branch_name  -- it switch branch_name branch
+
+git checkout -b branch_name1  -- create creates a new branch called branch_name1 and selects that branch 
+
+
+git push origin branch_name -- it will pushes code to branch_name branch
+
+
+git diff file_name -- lists changes made to file_name file
+
+git checkout branch_name -- used to switch to branch_name branch
+
+
+git stash -- it stashes  local changes/it removes locally made changes
+
+git stash list -- it lists all the stashes
+
+git stash clear -- it will removes all the stashes
+
+git stash save -- it will saves local changes to stash list
+
+git stash apply -- it will stashed local changes
+
+git checkout master
+git merge --no-ff heroku_commands  -- will merges heroku_command branch to master branch
+
+
+
+Notes to contribute this proect
+
+git clone https://github.com/yadagiri1125/dails_updates.git
+
+cd dails_updates
+
+git checkout -b your_branch
+
+## make some changes
+
+git add .
+git commit -am "add proper message"
+
+git push origin your_branch
+
+#ExecJS::RuntimeUnavailable: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+
+1.nano Gemfile
+   add  gem 'execjs'
+         gem 'therubyracer'
+2. bundle install
+
+### how to resolve error  Rvm is not a function selecting rubies with'rvm use' will not work
+ 1.Go to edit option in terminal
+ 2.Click profile preference
+ 3.Select title and command
+ 4.Click command
+ 5.Close terminal open the new terminal
+
+
+# solution for unable to install mysql2 gem
+
+   sudo apt-get install libmysqlclient-dev
+
+# installation of postgresql in ubuntu
+ 1.sudo apt-get install postgresql postgresql-contrib
+ 2.sudo apt-get install pgadmin3
+ 3.sudo nano /etc/postgresql/9.4/main/pg_hba.conf
+
+ #
+# Database administrative login by Unix domain socket
+local   all             postgres                                peer
+
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     trust
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            trust
+# IPv6 local connections:
+host    all             all             ::1/128                 trust
+# Allow replication connections from localhost, by a user with the
+# replication privilege.
+#local   replication     postgres                                peer
+#host    replication     postgres        127.0.0.1/32            trust
+#host    replication     postgres        ::1/128                 trust
+
+4.sudo /etc/init.d/postgresql restart
+
+
+
+ ##### how to resolve `autodetect': Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+    1.nano Gemfile
+    2. write Gemfile gem 'execjs' and  gem 'therubyracer'
+    3. CTRL+O and enter
+    4. CTRL+ X and enter
+    5. bundle install
+
+
+
+ Task 1 #: made changes to sample project
+
+ 1.cd sample
+ 2.rvm use 1.9.3
+ 3.rvm gemset use rails3
+ 4.subl .
+ 5.rails g controller dashboard index show  #this command used to create one controller and 2 views
+ 6.rails g model User name:string age:integer department:string is_active:boolean # create users table 
+              in the database and user.rb filein app/models
+ 7.rails g migration create_companies 
+      create_table :companies do |t|
+      t.string :name
+      t.text :description
+      t.text :color
+      t.decimal :price
+      t.timestamps null: false
+    end
+8.add column migration 
+
+  a.bin/rails generate migration AddPartNumberToProducts part_number:string
+  b.
+      class AddPartNumberToProducts < ActiveRecord::Migration
+        def change
+          add_column :products, :part_number, :string
+        end
+      end
+9. rename column migration rails
+
+ a.
+ change_table :products do |t|
+  t.remove :description, :name
+  t.string :part_number
+  t.index :part_number
+  t.rename :upccode, :upc_code
+ end
+
+10.  changing data type of column
+
+
+## untar a file command
+ tar -zxvf sample.tar.gz 
+
+ 
+
+11.
+Ruby On Rails::
+
+ Ruby :  Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+
+Rails :: 
+
+    1.MVC design pattern --> M-> Model(table in the database,is a .rb file),V-> views(html,haml,js,json,pdf,txt...),C-> Controller(is also a .rb file)
+       url in the browser --> config/routes.rb --> corresopding controller -->controller interacts with model to read or write data from/to model
+
+1. wireframe 
+2.database tableand schema
+
+a.micoro_posts   name:string length:integer  is_active:boolean  #CRUD= create read update delete
+
+MIGRATIONS::
+1.db/migrate
+2. .rb file 
+3.creating a table
+4.drop a table
+5.add column to existing table
+6.remove column toexisting table
+7.change data type of column
+8.rename column name
+9.update table(inserting deleting data)
+10.sql queries 
+11. create or drop indexes
+
+Migrations::
+  1.rails g migration create_micoro_posts 
+  2. rails g migration add_category_id_to_microposts  # add column migration
+  3. rails g migration rename_lenght_to_salary_in_microposts
+
+a1.rails g migration create_micoro_posts  # create_table_name  
+      create_table :micoro_posts do |t|
+      t.string :name
+      t.integer :length
+     end
+ a2. rake db:migrate(if database does not exits rake db:create)
+
+   1.create/drop table
+   2.create or drop index
+   3.add column/remove column
+   4. change the data type of existing column
+   5.load seed data
+   6.we can run raq sql
+   7.rename a column/table/index
+
+
+b.app/models/micro_post.rb   --> singular lower case table name
+     table name     model name      class name       migration_name
+       segments       segment.rb      Segment          rails g migration create_segments
+       users           user.rb         User            rails g migration create_users
+        posts           post.rb         Post           rails g migration create_posts
+        segment_parties  segment_party.rb SegmentParty  rails g migration create_segment_parties
+        parties          party.rb        Party           rails g migration create_parties
+
+  class MicroPost < ActiveRecord::Base
+    # singular camelcase form of table name
+    # allways inherits from ActiveRecord::Base
+
+  end
+ 
+ # things places in models
+  1.associations
+  2.callbacks
+  3.validations
+  4.included or extended modules
+  5.instance methods
+  6.self methods
+
+c.app/controllers/micro_posts_controller.rb #--> tablename_controller.rb
+    
+    class MicroPostsController < ApplicationController #ApplicationController also inherits from ActionController::Base
+    
+    end
+
+    # things placed in controller
+    1.private methods
+    2.filters
+    3.included or extended modules
+
+
+d.app/views/micro_posts  # here folder name is equalto table name
+   1.index.html.erb
+   2.show.html.erb
+   3.new.html.erb
+   4.create.html.erb
+
+   #things placed in views
+     1. use helper methods
+     2.html code
+     3.css
+     4.javascript/jquery
+  file formats::
+          .html.erb
+           .haml.erb
+            .js.erb
+
+e. config/routes.rb
+   
+  resources :micro_posts  # table name
+
+                       HTTP
+helpers/prefix         Verb   URI Pattern                  Controller#Action
+  micro_posts_path      GET    /micro_posts                   micro_posts#index
+                        POST   /micro_posts                   micro_posts#create
+ new_micro_posts_path   GET    /micro_posts/new               micro_posts#new
+edit_micro_posts_path   GET    /micro_posts/1/edit            micro_posts#edit
+     micro_post_path    GET    /micro_posts/1                 micro_posts#show
+                        PATCH  /micro_posts/1                 micro_posts#update
+                        PUT    /micro_posts/1                 micro_posts#update
+                        DELETE /micro_posts/1                 micro_posts#destroy
+new_users_path
+user_path 
+users_psth
+
+
+  1.to collection action
+      resources :micro_posts do
+          member do
+            get 'preview'
+             get 'preview1'
+              get 'preview2'
+          end
+      end  
+
+2.to add member action
+    resources :micro_posts do
+      collection do
+        get 'preview'
+         get 'preview1'
+          get 'preview3'
+      end
+    end
+
+ ## creating rake task
+
+1.create a file lib/tasks/user_seed_unseed.rake and place following content
+
+  namespace :user do
+    desc "seeds user data"
+    
+    task :seed => :environment do
+         for i in 0..100
+             User.create(name:"name#{i}")
+          end
+     end
+
+    desc "unseeds user data"
+    
+    task :unseed => :environment do
+      User.destroy_all
+    end
+
+    desc "this task seeds and unseeds user data"
+    task :all => [:seed, :unseed]
+
+    #def pick(model_class)
+     # model_class.find(:first, :order => 'RAND()')
+    #end
+  end
+
+  2. rake user:seed # rake namespace:task_name
+  3.rake user:unseed
+  4.rake user:all
+
+  ## rails in bulit rake tasks
+
+  rake db:create
+  rake db:migrate
+  rake db:setup
+  rake db:drop
+  rake db:seed
+  rake -p # this is used to list all the available rake tasks
+
+  rake -T # this is used to list all the available rake tasks
+
+
+  rake about                              # List versions of all Rails frameworks and the environment
+  1.rake assets:clean[keep]                 # Remove old compiled assets
+  rake assets:clobber                     # Remove compiled assets
+  rake assets:environment                 # Load asset compile environment
+  2.rake assets:precompile                  # Compile all the assets named in config.assets.precompile
+  rake cache_digests:dependencies         # Lookup first-level dependencies for TEMPLATE (like messages/show or comments/_comment.html)
+  rake cache_digests:nested_dependencies  # Lookup nested dependencies for TEMPLATE (like messages/show or comments/_comment.html)
+  3.rake db:create                          # Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to ...
+  4.rake db:drop                            # Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:drop:all to drop...
+  rake db:fixtures:load                   # Load fixtures into the current environment's database
+  5.rake db:migrate                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
+  rake db:migrate:status                  # Display status of migrations
+  6.rake db:rollback                        # Rolls the schema back to the previous version (specify steps w/ STEP=n)
+  rake db:schema:cache:clear              # Clear a db/schema_cache.dump file
+  rake db:schema:cache:dump               # Create a db/schema_cache.dump file
+  rake db:schema:dump                     # Create a db/schema.rb file that is portable against any DB supported by AR
+  rake db:schema:load                     # Load a schema.rb file into the database
+  7.rake db:seed                            # Load the seed data from db/seeds.rb
+  8.rake db:setup                           # Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the databas...
+  rake db:structure:dump                  # Dump the database structure to db/structure.sql
+  rake db:structure:load                  # Recreate the databases from the structure.sql file
+  rake db:version                         # Retrieves the current schema version number
+  rake doc:app                            # Generate docs for the app -- also available doc:rails, doc:guides (options: TEMPLATE=/rdoc-template.rb, TITLE=...
+  rake log:clear                          # Truncates all *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)
+  9.rake middleware                         # Prints out your Rack middleware stack
+  rake notes                              # Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)
+  rake notes:custom                       # Enumerate a custom annotation, specify with ANNOTATION=CUSTOM
+  rake rails:template                     # Applies the template supplied by LOCATION=(/path/to/template) or URL
+  rake rails:update                       # Update configs and some other initially generated files (or use just update:configs or update:bin)
+  10.rake routes                             # Print out all defined routes in match order, with names
+  rake secret                             # Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)
+  rake stats                              # Report code statistics (KLOCs, etc) from the application or engine
+  rake test                               # Runs all tests in test folder
+  rake test:all                           # Run tests quickly by merging all types and not resetting db
+  rake test:all:db                        # Run tests quickly, but also reset db
+  rake test:db                            # Run tests quickly, but also reset db
+  rake time:zones:all                     # Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g....
+  11.rake tmp:clear                          # Clear session, cache, and socket files from tmp/ (narrow w/ tmp:sessions:clear, tmp:cache:clear, tmp:sockets:c...
+  rake tmp:create                         # Creates tmp directories for sessions, cache, sockets, and pids
+
+
+        
+    end            
+        
+
+
+## scaffolding
+
+  1.rails g scaffold Segment name:string age:integer party_id:integer
+  2.rake db:migrate
+  3.rails s
+  4.https://localhost:3000/segments
+
+##Could not find bcrypt-3.1.10 in any of the sources
+Run `bundle install` to install missing gems.
+
+1. bundle install
+
+
+## laouts
+1.by default all  controllers uses application layout
+
+2.controller level layout
+   class Welcome1Controller < ApplicationController
+     layout 'welcome'
+   end
+3.action level layout
+
+  class Welcome1Controller < ApplicationController
+     def index 
+       layout 'welcome'
+     end
+  end
+
+4.using layout in render or redirect
+
+  
+  class Welcome1Controller < ApplicationController
+     def index 
+       render :layout => 'welcomeil'
+     end
+  end
+
+
+  ## Associations
+## Active Record Query Interface
+
+    table:: users(name,address)
+
+    class User < ActiveRecord::Base
+    end
+
+  User.create(name:'name1',address:'address1')
+  User.create(name:'name2',address:'address2')
+  User.create(name:'name3',address:'address3')
+  User.create(name:'name4',address:'address4')
+  User.create(name:'name5',address:'address5')
+  User.create(name:'name6',address:'address6')
+
+  Client.find(10)
+  Client.find([1, 10])
+  Client.take
+  Client.take(2)
+  Client.first
+  Client.first(3)
+  Client.last
+  Client.last(3)
+  Client.find_by first_name: 'Lifo'
+  Client.where(first_name: 'Lifo').take
+  Client.find_by! first_name: 'does not exist'
+  Client.where(first_name: 'does not exist').take!
+  Client.where("orders_count = ?", params[:orders])
+  Client.where("orders_count = ? AND locked = ?", params[:orders], false)
+
+  1.one to one (belongs_to , has_one)
+  2.one to many(has_many, belongs_to)
+  3.many to many(a. has_many through  b.has_many_and_belongs_to HABTM)
+  4.polymorphic associations
+  5.single table inheritance(STI)
+  6.self join
+
+
+
+   1. ONE TO ONE
+
+   class MicroPost < ActiveRecord::Base
+        belongs_to :user
+   end
+
+  class User < ActiveRecord::Base
+       has_one :micro_post
+  end
+
+User.create(name:'name1',micro_post_id:1)
+User.create(name:'name2',micro_post_id:1)
+User.create(name:'name3',micro_post_id:2)
+User.create(name:'name4',micro_post_id:2)
+User.create(name:'name5')
+User.create(name:'name6')
+
+MicroPost.create(name:'mname1',user_id:5)
+MicroPost.create(name:'mname2',user_id:6)
+MicroPost.create(name:'mname3',user_id:5)
+MicroPost.create(name:'mname4',user_id:6)
+
+2.0.0-p643 :033 > u1  = User.find(2)
+  User Load (0.7ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+ => #<User id: 2, name: "name2", age: nil, department: nil, is_active: nil, micro_post_id: 1, created_at: "2015-06-24 17:10:25", updated_at: "2015-06-24 17:10:25"> 
+2.0.0-p643 :034 > u1.micro_post
+  MicroPost Load (0.4ms)  SELECT "micro_posts".* FROM "micro_posts" WHERE "micro_posts"."user_id" = ? ORDER BY "micro_posts"."id" ASC LIMIT 1  [["user_id", 2]]
+ => nil 
+2.0.0-p643 :035 > u1  = MicroPost.find(2)
+  MicroPost Load (0.9ms)  SELECT "micro_posts".* FROM "micro_posts" WHERE "micro_posts"."id" = ? LIMIT 1  [["id", 2]]
+ => #<MicroPost id: 2, name: "mname2", desc: nil, color: nil, price: nil, user_id: 6, created_at: "2015-06-24 17:18:38", updated_at: "2015-06-24 17:18:38"> 
+2.0.0-p643 :036 > u1.user
+  User Load (0.4ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+ => #<User id: 6, name: "name6", age: nil, department: nil, is_active: nil, micro_post_id: nil, created_at: "2015-06-24 17:14:55", updated_at: "2015-06-24 17:14:55">
+
+
+ 2.ONE To MANY
+ 2. ONE To MANY
+
+   class MicroPost < ActiveRecord::Base
+        belongs_to :user
+   end
+
+  class User < ActiveRecord::Base
+       has_many :micro_posts
+  end
+
+
+  2.0.0-p643 :043 >   u1  = User.find(2)
+  User Load (0.4ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+ => #<User id: 2, name: "name2", age: nil, department: nil, is_active: nil, micro_post_id: 1, created_at: "2015-06-24 17:10:25", updated_at: "2015-06-24 17:10:25"> 
+2.0.0-p643 :044 > u1.micro_posts
+  MicroPost Load (6.7ms)  SELECT "micro_posts".* FROM "micro_posts" WHERE "micro_posts"."user_id" = ?  [["user_id", 2]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.0.0-p643 :045 > u1.micro_posts.count
+   (0.3ms)  SELECT COUNT(*) FROM "micro_posts" WHERE "micro_posts"."user_id" = ?  [["user_id", 2]]
+ => 0 
+2.0.0-p643 :046 > u1  = User.last
+  User Load (0.5ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
+ => #<User id: 6, name: "name6", age: nil, department: nil, is_active: nil, micro_post_id: nil, created_at: "2015-06-24 17:14:55", updated_at: "2015-06-24 17:14:55"> 
+2.0.0-p643 :047 > u1.micro_posts
+  MicroPost Load (0.3ms)  SELECT "micro_posts".* FROM "micro_posts" WHERE "micro_posts"."user_id" = ?  [["user_id", 6]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<MicroPost id: 2, name: "mname2", desc: nil, color: nil, price: nil, user_id: 6, created_at: "2015-06-24 17:18:38", updated_at: "2015-06-24 17:18:38">, #<MicroPost id: 4, name: "mname4", desc: nil, color: nil, price: nil, user_id: 6, created_at: "2015-06-24 17:18:39", updated_at: "2015-06-24 17:18:39">]> 
+
+
+3. MANY To MANY
+
+A.
+ class MicroPost < ActiveRecord::Base
+      has_many :users,  :through => :blog
+      has_many :blogs
+ end
+
+class User < ActiveRecord::Base
+     has_many :micro_posts,  :through => :blog
+     has_many :blogs
+end
+
+
+ class Blog < ActiveRecord::Base
+      belongs_to :user
+      bselongs_to :micro_posts
+ end
+
+rails g migration create_blogs user_id:integer micro_post_id:integer
+
+rake db:migrate
+ Blog.create(user_id:1,micro_post_id:1)
+
+ Blog.create(user_id:2,micro_post_id:2)
+
+2.0.0-p643 :036 > u1 = User.find(1)
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+ => #<User id: 1, name: "name1", age: nil, department: nil, is_active: nil, micro_post_id: 1, created_at: "2015-06-24 17:10:15", updated_at: "2015-06-24 17:10:15"> 
+2.0.0-p643 :037 > u1.micro_posts
+  MicroPost Load (0.4ms)  SELECT "micro_posts".* FROM "micro_posts" INNER JOIN "blogs" ON "micro_posts"."id" = "blogs"."micro_post_id" WHERE "blogs"."user_id" = ?  [["user_id", 1]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<MicroPost id: 1, name: "mname1", desc: nil, color: nil, price: nil, user_id: 5, created_at: "2015-06-24 17:18:38", updated_at: "2015-06-24 17:18:38">]> 
+2.0.0-p643 :038 > 
+
+
+B.HABTM
+
+class User < ActiveRecord::Base
+    # singular camelcase form of table name
+    # allways inherits from ActiveRecord::Base
+    #belongs_to :micro_post
+     
+     #A. has_many through
+   #has_many :micro_posts,  :through => :blog
+   #has_many :blogs
+
+   #B. HABTM
+   has_and_belongs_to_many :micro_posts
+  end
+
+  class MicroPost < ActiveRecord::Base
+    # singular camelcase form of table name
+    # allways inherits from ActiveRecord::Base
+    #belongs_to :user
+     
+     #A. has_many through
+   #has_many :users,  :through => :blog
+   #has_many :blogs
+
+   #B. HABTM
+   has_and_belongs_to_many :users
+  end
+
+
+rails g migration create_micro_posts_users user_id:integer micro_post_id:integer
+
+2.0.0-p643 :002 >   u1 = User.first
+  User Load (0.3ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+ => #<User id: 1, name: "name1", age: nil, department: nil, is_active: nil, micro_post_id: 1, created_at: "2015-06-24 17:10:15", updated_at: "2015-06-24 17:10:15"> 
+2.0.0-p643 :003 > u1.micro_posts
+  MicroPost Load (3.0ms)  SELECT "micro_posts".* FROM "micro_posts" INNER JOIN "micro_posts_users" ON "micro_posts"."id" = "micro_posts_users"."micro_post_id" WHERE "micro_posts_users"."user_id" = ?  [["user_id", 1]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.0.0-p643 :004 > 
+
+2.0.0-p643 :004 >
+
+
+4. Polymorphic Association
+
+        class Picture < ActiveRecord::Base
+          belongs_to :imageable, polymorphic: true
+        end
+
+        class Employee < ActiveRecord::Base
+          has_many :pictures, as: :imageable
+        end
+
+        class Product < ActiveRecord::Base
+          has_many :pictures, as: :imageable
+        end
+
+
+        class CreatePictures < ActiveRecord::Migration
+          def change
+            create_table :pictures do |t|
+              t.string :name
+              t.references :imageable, polymorphic: true, index: true
+              t.timestamps null: false
+            end
+          end
+        end
+
+    rails console::
+
+      e1 =Employee.first
+
+      e1.pictures 
+
+
+5. Self Joins
+
+
+    class Employee < ActiveRecord::Base
+    ��has_many :subordinates, class_name: "Employee",
+    ��������������������������foreign_key: "manager_id"
+    �
+    ��belongs_to :manager, class_name: "Employee"
+    end
+
+    class CreateEmployees < ActiveRecord::Migration
+    ��def change
+    ����create_table :employees do |t|
+    ������t.references :manager, index: true
+    ������t.timestamps null: false
+    ����end
+    ��end
+    end
+
+Rails Console:
+e1 = Employee.first
+e1.employees
+e1.manager
+
+
+
+  ## form_tag(search , uploading excel sheet or csv files)
+
+
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+##checkboxes
+
+<%= check_box_tag(:pet_dog) %>
+<%= label_tag(:pet_dog, "I own a dog") %>
+<%= check_box_tag(:pet_cat) %>
+<%= label_tag(:pet_cat, "I own a cat") %>
+
+
+## Radio buttons
+
+   <%= radio_button_tag(:age, "child") %>
+   <%= label_tag(:age_child, "I am younger than 21") %>
+   <%= radio_button_tag(:age, "adult") %>
+   <%= label_tag(:age_adult, "I'm over 21") %>
+
+## misc input fields
+
+<%= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
+<%= password_field_tag(:password) %>
+<%= hidden_field_tag(:parent_id, "5") %>
+<%= search_field(:user, :name) %>
+<%= telephone_field(:user, :phone) %>
+<%= date_field(:user, :born_on) %>
+<%= datetime_field(:user, :meeting_time) %>
+<%= datetime_local_field(:user, :graduation_day) %>
+<%= month_field(:user, :birthday_month) %>
+<%= week_field(:user, :birthday_week) %>
+<%= url_field(:user, :homepage) %>
+<%= email_field(:user, :address) %>
+<%= color_field(:user, :favorite_color) %>
+<%= time_field(:task, :started_at) %>
+<%= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %>
+<%= range_field(:product, :discount, in: 1..100) %>
+
+
+## form_for
+
+<%= form_for @article, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :body, size: "60x12" %>
+  <%= f.submit "Create" %>
+<% end %>
