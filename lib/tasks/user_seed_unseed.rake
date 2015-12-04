@@ -19,4 +19,5 @@ namespace :user do
     #def pick(model_class)
      # model_class.find(:first, :order => 'RAND()')
     #end
+    #dskfhnasjk
   end
