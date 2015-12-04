@@ -2,6 +2,10 @@ require 'open-uri'
 namespace :update_zip_codes do
       desc 'update senders email to @seniorleads.com'
   task :xml => :environment do
+
+#efljmsdklf
+#df,jskaldfj
+
  #      uri = URI.parse("http://api.zip-codes.com/ZipCodesAPI.svc/1.0/GetAllZipCodes?country=US&key=B71MEA82AB73FBZH3WUB")
     # http = Net::HTTP.new(uri.host, uri.port)
     # http.use_ssl = true
