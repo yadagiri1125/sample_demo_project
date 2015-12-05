@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'execjs'
 gem 'therubyracer'
-# Use sqlite3 as the database for Active Record
+# Use sqlite3 asmbash the database for Active Record
 gem 'sqlite3'
 
 # Use SCSS for stylesheets

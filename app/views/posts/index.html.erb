@@ -1,22 +1,52 @@
-<h1>Posts#index1</h1>
-Find me in app/views/posts/index.html.erb
-<p>
-<h1><%= @page %> </h1>
-</p>
 
-<table>
-<tr>
-<td>Name </td>
-<td>Id </td>
-</tr>
-<% @posts.each do |post| %>
-  <tr>
-  <td>
-	<%= post.name %> 
-  </td>
-  <td>
-	<%= post.id %> 
-  </td>
-  </tr>
-<% end %>
-</table>
+<h1><%= link_to 'New Post', new_post_path %> </h1>
+<h1><%= link_to 'New User', new_user_path %> </h1>
+
+<div id="posts_list" class="post_list">
+        <h1> Posts Information</h1>
+        <table>
+            <tr>
+                <td>Name </td>
+                <td>Id </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <% @posts.each do |post| %>
+              <tr>
+                  <td>
+                    <%= post.name %>
+                  </td>
+                  <td>
+                    <%= post.id %>
+                  </td>
+                <td><%= link_to 'Show', post %></td>
+                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+        </table>
+</div>
+<div id="users_list" class="user_list">
+        <h1> Usres Information</h1>
+
+        <table>
+          <tr>
+            <td>Name </td>
+            <td>Id </td>
+          </tr>
+
+          <% @users.each do |user| %>
+              <tr>
+                <td>
+                  <%= user.name %>
+                </td>
+                <td>
+                  <%= user.id %>
+                </td>
+              </tr>
+          <% end %>
+        </table>
+
+  </div>

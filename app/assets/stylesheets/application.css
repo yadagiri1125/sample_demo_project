@@ -11,3 +11,14 @@
  *= require_self
  *= require_tree .
  */
+
+.user_list{
+    margin-left: 27%;
+    margin-top: -245%;
+    background-color:cyan;
+}
+
+.post_list{
+    background-color:cyan;
+}
+

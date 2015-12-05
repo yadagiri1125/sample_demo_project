@@ -47,11 +47,11 @@ SampleApp1::Application.routes.draw do
   #     resources :sales do
   #       get 'recent', on: :collection
   #     end
-  #   end
-  dfsd;lsfjkg
-  sdflg/ksmdfl;grep(dflg.msdflg/msdflg
+  # #   end
+  # dfsd;lsfjkg
+  # sdflg/ksmdfl;grep(dflg.msdflg/msdflg
 
-    dfgl.smdfklg) { |match|  }
+  #   dfgl.smdfklg) { |match|  }
   # Example resource route with concerns:
   #   conc
 
