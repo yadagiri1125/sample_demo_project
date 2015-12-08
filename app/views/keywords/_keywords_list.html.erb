@@ -1,0 +1,16 @@
+<% unless @keywords.nil? %>
+  <table >
+    <% @keywords.each do |keyword| %>
+      <tr>
+          <td>
+           <%= keyword.keyword %>
+          </td>
+          <td>&nbsp;&nbsp;</td>
+            <td> 
+            <%= link_to 'Edit Keyword', edit_keyword_path(keyword), remote: true %>
+            </td>
+            <td><%= link_to 'Delete Keyword', keyword_path(keyword), remote: 'true', method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

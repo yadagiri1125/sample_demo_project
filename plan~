@@ -1,8 +1,151 @@
+##defining a method
+
+1. method used to defined with a keyword called def
+2. method definition ends with a keyword called end
+3. if it is multi word all words shoud be seperated with _
+4.they shouldnot start with numbers , they can start with _ or alphabets
+ex::
+def sample
+  a="hellooo"
+  b="world"
+  puts a+" "+b  
+end
+
+def my_method11231
+end
+def current123_user
+end
+def load_user
+end
+
+def _current_use
+end
+
+3. claiing a method
+  ex:: sample
+
+## methods with arguments
+1.definition
+  def sample a,b
+    puts a+b 
+  end
+2.calling a method
+ex::
+
+   sample "hellloo","world"
+   sample 1,2
+
+## method with return type
+1. definition
+  
+def sample a,b
+    return a+b 
+end
+  
+2. calling a method
+result = sample 4,5
+
+puts result
+
+ 
+## method with return type without arguments
+
+   def sample
+     a=10
+     b=20 
+     return a+b 
+   end
+   result = sample
+   puts result
+
+## define a class
+1.first letter of a class should be capital letter
+2.if it is multi owrd it should be in a camalcase form
+
+class Post 
+  def sample
+    puts "this is sample method"
+  end 
+  def sample1
+    puts "this is sample1 method"
+  end 
+  def sample2
+    puts "this is sample2 method"
+  end 
+  def sample_3
+    puts "this is pradeep method"
+  end                                                                           
+end
+
+
+class Calculation 
+  def add
+    a=10
+    b=20
+    puts a+b
+  end 
+  def difference
+    a=10
+    b=20
+    puts a-b
+  end 
+  def multiply
+    a=10
+    b=20
+    puts a*b
+  end 
+  def division
+    a=10
+    b=20
+    puts a/b
+  end  
+  def all
+    add
+    difference
+    multiply
+    division
+  end                                                                         
+end
+
+
+class MicroPost
+end
+class CurrentUser
+end
+
+
+2. creating a object for class
+syntax:  variable = Classname.new
+  @post = Post.new
+
+creating a rails project::
+
+rails 2.x.x  2.0.0 2.3.5  2.3.7   ruby 1.8.x  1.8.6 1.8.7
+rails 3.x.x  3.0.0 3.2.3  3.2.1   ruby 1.9.x  1.9.2 1.9.1 1.9.3 minimum 1.8.7  
+rails 4.x.x  4.0.0 4.1.0  4.2.2   ruby 2.0.0n 2.2.2  minimum 1.9.3
+databases::  mysql  postgress/postgresql sqlite3(default)
+
+rvm use 2.0.0
+rvm gemset create sample_project
+rvm gemset use sample_project
+gem install rails -v 4.0.2
+rails new sample_5_dec -d mysql 
+subl .  -- to open project in sublime
+edit config/database.yml  place your root user password
+rake db:create
+rails s
+localhost:3000
+Gem::LoadError: Specified 'mysql2' for database adapter, but the gem is not loaded. Add `gem 'mysql2'` to your Gemfile
+
+gem 'mysql2', '~> 0.3.18'
+
 1. 8 controller models migrations  views routes and teir mapping
 2.rake task
 3. push code base to git
 4.deploy dms inspect date,mverso,venuedog
-
+5. rake task list first 100 posts name
+6.crud actions for 8 controllers
+7. practice Active Record Query Interface
 
 To install JDK and JRE in ubuntu
 1.sudo add-apt-repository ppa:webupd8team/java
@@ -369,7 +512,7 @@ Rails ::
 1. wireframe 
 2.database tableand schema
 
-a.micoro_posts   name:string length:integer  is_active:boolean  #CRUD= create read update delete
+a.micoro_posts   name:string  is_active:boolean  #CRUD= create read update delete
 
 MIGRATIONS::
 1.db/migrate
@@ -390,10 +533,68 @@ Migrations::
   3. rails g migration rename_lenght_to_salary_in_microposts
 
 a1.rails g migration create_micoro_posts  # create_table_name  
-      create_table :micoro_posts do |t|
+      create_table :micro_posts do |t|
       t.string :name
       t.integer :length
      end
+
+   create_table :clients do |t|
+      t.string :name
+      t.integer :address_id
+      t.integer :order_id
+      t.timestamps null: false
+   end
+
+   create_table :customers do |t|
+     t.string :name
+   end
+  
+   create_table :orders do |t|
+     t.string :name
+     t.integer :customer_id
+  end
+ 
+  create_table :posts do |t|
+t.string :name
+t.integer :user_id
+t.string :description
+t.integer :category_id
+t.boolean :is_published
+t.timestamps
+end
+
+create_table :categories do |t|
+t.string :name
+t.integer :user_id
+t.string :description
+t.integer :category_id
+t.boolean :is_published
+t.timestamps
+end
+
+create_table :products do |t|
+t.string :name
+t.integer :user_id
+t.string :description
+t.integer :category_id
+t.boolean :is_published
+t.timestamps
+end
+
+create_table :users do |t|
+t.string :name
+t.integer :manager_id
+t.timestamps
+end
+
+create_table :locations do |t|
+t.string :name
+t.string :country
+t.integer :party_id
+t.timestamps
+end
+
+
  a2. rake db:migrate(if database does not exits rake db:create)
 
    1.create/drop table
@@ -406,7 +607,7 @@ a1.rails g migration create_micoro_posts  # create_table_name
 
 
 b.app/models/micro_post.rb   --> singular lower case table name
-     table name     model name      class name       migration_name
+     table name     model name      class name       migration_name                            
        segments       segment.rb      Segment          rails g migration create_segments
        users           user.rb         User            rails g migration create_users
         posts           post.rb         Post           rails g migration create_posts
@@ -429,9 +630,15 @@ b.app/models/micro_post.rb   --> singular lower case table name
 
 c.app/controllers/micro_posts_controller.rb #--> tablename_controller.rb
     
-    class MicroPostsController < ApplicationController #ApplicationController also inherits from ActionController::Base
+    class MicroPostsController < ApplicationController 
+      #ApplicationController also inherits from ActionController::Base
     
     end
+
+   table name      controller name           class name
+   users         users_controller.rb         UsersController
+   micro_posts   micro_posts_controller.rb   MicroPostsController
+   Parties
 
     # things placed in controller
     1.private methods
@@ -909,3 +1116,131 @@ e1.manager
   <%= f.text_area :body, size: "60x12" %>
   <%= f.submit "Create" %>
 <% end %>
+
+
+
+
+##Filters::
+
+1.used to execute before/after/around the execution of controller action
+2.types::
+   1.before filters
+   2.after filters
+   3.around filters
+3. we can use only: option to restrict controller actions to be affected
+4. methods used in filters are allways private methods
+
+## crud actions
+class PostsController < ApplicationController
+ 
+ before_action :set_post, only: [:show,:edit,:update,:destroy]
+ def index
+   # @posts = Post.all
+   @users = User.all
+ end
+
+  def show
+  end
+
+   def new
+     @post = Post.new
+   end
+
+  def edit
+  end
+  def create
+     @post = Post.new(post_params)
+     @post.save
+     redirect_to posts_path
+  end
+
+   def update
+     @post.update(post_params)
+      redirect_to post_path
+   end
+
+   def destroy
+    @post.destroy
+    redirect_to posts_path
+   end
+
+private
+ def post_params
+   params.require(:post).permit( :name,:user_id,:description,:category_id)
+ end
+ def set_post
+   @post = Post.find(params[:id])
+ end
+end
+
+
+
+##strong parameters ::
+1. are placed at the bottom of the controller as a private method
+2.they used to tacle mass assignment and are replacement for attr_accessors in rails3
+rails4::
+  def keyword_params
+     params.require(:keyword).permit(:keyword)
+  end
+rails3::
+ attr_accessor :keyword
+
+keywords_path  = index action of keywords controller
+keyword_path(keyword)  =  show action of keywords controller
+new_keyword_path = new action of keywords controller
+edit_keyword_path(keyword) = edit action of keyword controller
+
+Assets::
+
+1.includes css files,javascript files , images
+2. they can be placed in any of following three location
+  a.app/assets
+  b.lib/assets
+  c.vendor/assets
+3.these folders contains sub folders like images , javascripts , stylesheets
+
+
+DIV TAG::
+
+ 1. div is used to combine html elements
+ 2. div is created with <div> </div> tags
+ 3. div can be nested
+     <div>
+         <div> 
+            <div> </div>
+         </div>
+         <div> 
+            <div> </div>
+         </div>
+     </div>
+ 4. following is the sytax to give id to div tag
+
+     <div id = "post_list">
+     </div>
+ 5.how to give css class to div tag
+
+     <div class="listing_post">
+     </div>
+
+Partials::
+1.file name allways starts with _
+  ex:: _form.html.erb
+2. partials used to render in main views
+    <%= render 'keywords/form' %>
+3. we can pass locales to partials with following syntax
+    <%= render 'keywords/keywords_list', keywords:@keywords %>
+
+Forms::
+
+1.types
+  a. form_for
+  b.form_tag
+     simple_form_for
+
+
+    
+    
+
+   
+
+

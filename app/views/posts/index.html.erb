@@ -2,7 +2,7 @@
 <h1><%= link_to 'New Post', new_post_path %> </h1>
 <h1><%= link_to 'New User', new_user_path %> </h1>
 
-<div id="posts_list" class="post_list">
+<div id="posts_list" class="raghu">
         <h1> Posts Information</h1>
         <table>
             <tr>
@@ -12,6 +12,7 @@
               <td></td>
               <td></td>
             </tr>
+            <% @posts = Post.all %>
 
             <% @posts.each do |post| %>
               <tr>
@@ -21,7 +22,7 @@
                   <td>
                     <%= post.id %>
                   </td>
-                <td><%= link_to 'Show', post %></td>
+                <td><%= link_to 'Show', post_path %></td>
                 <td><%= link_to 'Edit', edit_post_path(post) %></td>
                 <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>

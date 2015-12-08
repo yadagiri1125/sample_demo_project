@@ -21,4 +21,16 @@ namespace :user do
      # model_class.find(:first, :order => 'RAND()')
     #end
     #dskfhnasjk
+
+     desc "unseeds user data"
+    
+    task :update_posts => :environment do
+      @posts = Post.take(100)
+      @posts.each_with_index do |post,i|
+        puts "updaing #{post.id} record"
+        post.user_id = 100 + i
+        post.description = "lsdjkadjask" 
+        post.save   
+      end
+    end
   end

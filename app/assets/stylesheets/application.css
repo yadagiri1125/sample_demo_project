@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap/bootstrap
  */
 
 .user_list{
@@ -18,7 +19,7 @@
     background-color:cyan;
 }
 
-.post_list{
+.raghu{
     background-color:cyan;
 }
 
