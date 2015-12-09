@@ -11,9 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207035415) do
+ActiveRecord::Schema.define(version: 20151209042657) do
 
   create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "description"
+    t.integer  "category_id"
+    t.boolean  "is_published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", force: true do |t|
     t.string   "name"
     t.integer  "user_id"
     t.string   "description"
@@ -31,8 +41,27 @@ ActiveRecord::Schema.define(version: 20151207035415) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "countires", force: true do |t|
+    t.string   "name"
+    t.integer  "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "customers", force: true do |t|
     t.string "name"
+  end
+
+  create_table "customers_products", id: false, force: true do |t|
+    t.integer "customer_id", null: false
+    t.integer "product_id",  null: false
+  end
+
+  create_table "its", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "keywords", force: true do |t|
@@ -47,7 +76,10 @@ ActiveRecord::Schema.define(version: 20151207035415) do
     t.integer  "party_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "locations", ["user_id"], name: "index_locations_on_user_id"
 
   create_table "micro_posts", force: true do |t|
     t.string  "name"
@@ -81,10 +113,10 @@ ActiveRecord::Schema.define(version: 20151207035415) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "name"
     t.integer  "manager_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "address_id"
   end
 
 end

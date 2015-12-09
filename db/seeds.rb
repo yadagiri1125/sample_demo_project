@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 for i in 0..100
-User.create(name:"user#{i}")
+puts "creating #{i} record"
+#User.create(name:"user#{i}")
 Post.create(name:"user#{i}")
 Category.create(name:"user#{i}")
 Product.create(name:"user#{i}")

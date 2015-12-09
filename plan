@@ -1238,9 +1238,124 @@ Forms::
      simple_form_for
 
 
-    
-    
+Migration::
+1. create a stand alone migration
 
+   rails g migration some_purpose
+1.rake db:rollback used to rollback last migration
+2.rails d migration some_purpose to remove migration
+3.rails g migration create_countires name:string code:integer
+   create_table :micro_posts do |t|
+      t.string :name
+      t.integer :length
+      t.integer :emp_code
+     end
+4. add column migration
+   add_column :users, :address_id, :integer
+
+5.add index migration 
+
+  add_index :users, :name
+6. remove column migration 
+
+  remove_column :users, :name, :string
+
+7. add association migration
+
+   bin/rails generate migration AddUserRefToProducts user:references
+8.
+ 
+Joining Table Properties::
+1.no id column
+2.only 2 columns those are foreignkeys
+
+     customers_products   customer_id product_id
+     locations_users      user_id location_id
+3. there is no timestamps columns
+4.nming convention firsttablename_secondtablename 
+    
+create model ::
+bin/rails generate model It name:string description:text
+
+## giving null constraint and storage engine
+
+create_table :products, options: "ENGINE=BLACKHOLE" do |t|
+  t.string :name, null: false
+end
+
+validations::
+ 1.client side validations
+ 2.server side validations
+ 3.database level validation(constraints)
+
+change table migration::
+
+change_table :products do |t|
+  t.remove :description, :name
+  t.string :part_number
+  t.index :part_number
+  t.rename :upccode, :upc_code
+end
    
+## add foreign key migration
+add_foreign_key :articles, :authors
+
+adds auther_id to articles table
+
+Removing a foreign key is easy as well:
+# let Active Record figure out the column name
+remove_foreign_key :accounts, :branches
+ 
+# remove foreign key for a specific column
+remove_foreign_key :accounts, column: :owner_id
+ 
+# remove foreign key by name
+remove_foreign_key :accounts, name: :special_fk_name
+
+## running raw sql
+Product.connection.execute('UPDATE `products` SET `price`=`free` WHERE 1')
+
+
+class ExampleMigration < ActiveRecord::Migration
+  def up
+    create_table :distributors do |t|
+      t.string :zipcode
+    end
+ 
+    # add a CHECK constraint
+    execute <<-SQL
+      ALTER TABLE distributors
+        ADD CONSTRAINT zipchk
+        CHECK (char_length(zipcode) = 5);
+    SQL
+ 
+    add_column :users, :home_page_url, :string
+    rename_column :users, :email, :email_address
+  end
+ 
+  def down
+    rename_column :users, :email_address, :email
+    remove_column :users, :home_page_url
+ 
+    execute <<-SQL
+      ALTER TABLE distributors
+        DROP CONSTRAINT zipchk
+    SQL
+ 
+    drop_table :distributors
+  end
+end
+
+
+If you specify a target version, Active Record will run the required migrations (change, up, down) until it has reached the specified version. The version is the numerical prefix on the migration's filename. For example, to migrate to version 20080906120000 run:
+$ bin/rake db:migrate VERSION=20080906120000
+
+
+bin/rake db:rollback
+bin/rake db:rollback STEP=3
+
+rake db:setup  = > create migrate seed  ==> rake db:create;rake db:migrate;rake db:seed
+
+bin/rake db:migrate RAILS_ENV=test
 
 
