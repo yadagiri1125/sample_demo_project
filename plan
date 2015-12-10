@@ -628,6 +628,93 @@ b.app/models/micro_post.rb   --> singular lower case table name
   5.instance methods
   6.self methods
 
+Active Record as an ORM Framework
+
+Active Record gives us several mechanisms, the most important being the ability to:
+
+    Represent models and their data.
+    Represent associations between these models.
+    Represent inheritance hierarchies through related models.
+    Validate models before they get persisted to the database.
+    Perform database operations in an object-oriented fashion
+
+Model / Class    
+Article
+LineItem
+Deer
+Mouse
+Person
+Table / Schema
+articles
+line_items
+deers
+mice
+people
+
+Schema Conventions
+
+Active Record uses naming conventions for the columns in database tables, depending on the purpose of these columns.
+
+    Foreign keys - These fields should be named following the pattern singularized_table_name_id (e.g., item_id, order_id). These are the fields that Active Record will look for when you create associations between your models.
+    Primary keys - By default, Active Record will use an integer column named id as the table's primary key. When using Active Record Migrations to create your tables, this column will be automatically created.
+
+
+## creating new records in a table
+  a. using .new and .save
+
+   ex::  1.@yadagiri = Product.new(name:"name106",user_id:1,description:"description1")
+         @yadagiri.save
+         Product.count
+2.@yadagiri = Product.create(name:"name107",user_id:1,description:"description1")
+         Product.count
+3. product_params = {name:"name107",user_id:2,description:"description2"}
+          a.Product.create(product_params)
+          b.@yada = Product.new(product_params)
+            @yada.save
+
+##Overriding the Naming Conventions
+class Product < ActiveRecord::Base
+  self.table_name = "my_products"
+end   
+        
+# overriding primary key
+
+ class Product < ActiveRecord::Base
+  self.primary_key = "product_id"
+end
+
+
+user = Product.new
+user.name = "David"
+user.description = "Code Artist" 
+
+user = Product.new do |p|
+   p.name = "David"
+   p.description = "Code Artist" 
+end
+
+## updating a record
+1.
+user = Product.find_by(name: 'name0')
+user.name = 'Dave'
+user.save
+
+2.
+user = Product.find_by(name: 'nme0')
+user.update(name: 'Dave')
+
+Product.update_all "name = 'name', description = 'true'"
+
+##Delete
+
+user = Product.find_by(name: 'David')
+user.destroy
+
+
+ rails generate controller home index  --no-helper --no-assets --no-controller-specs --no-view-specs  --no-test-framework
+
+ rails g scaffold Fast name:string  --no-helper --no-assets --no-controller-specs --no-view-specs  --no-test-framework
+
 c.app/controllers/micro_posts_controller.rb #--> tablename_controller.rb
     
     class MicroPostsController < ApplicationController 

@@ -1,4 +1,13 @@
 SampleApp1::Application.routes.draw do
+  get "countries/index"
+  get "countries/show"
+  get "countries/edit"
+  get "countries/sample"
+  get "countries/calculation"
+  resources :fasts
+
+  get "home/sample1"
+  get "home/sample"
   resources :locations
 
   resources :users

@@ -1,0 +1,27 @@
+<h1>Listing fasts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fasts.each do |fast| %>
+      <tr>
+        <td><%= fast.name %></td>
+        <td><%= link_to 'Show', fast %></td>
+        <td><%= link_to 'Edit', edit_fast_path(fast) %></td>
+        <td><%= link_to 'Destroy', fast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fast', new_fast_path %>
