@@ -912,6 +912,15 @@ Run `bundle install` to install missing gems.
      end
   end
 
+# forms
+
+1.form_for  models maily used to store data from forms
+ 
+2.form_tag  buttons like search , uploading excel,xml,csv sheet, generic purpose , button which does not ivolve in database insertion
+ 
+gems:
+simple_form
+http://railscasts.com/episodes/234-simple-form
 
   ## Associations
 ## Active Record Query Interface

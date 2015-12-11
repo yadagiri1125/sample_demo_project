@@ -1,0 +1,107 @@
+.d-label {
+  font-weight: bold;
+  padding-left: 8px;
+}
+
+.pageinfo {
+  text-align:right;
+  padding:10px;
+}
+
+.breadcrumb {
+  padding:5px;
+  padding-bottom:2px;
+  margin-bottom:0px; 
+  background-color:#EEEEEE
+}
+
+.hidden {
+  display:none;
+}
+
+#wrap .navbar {
+  border-bottom: 1px solid #aaa;
+}
+
+.navbar-mid-line {
+  width:100%;
+  padding:5px;
+  background-color:#EEEEEE
+}
+
+.navbar-mid-line .row {
+  padding:5px;
+}
+
+.main-container {
+  margin-bottom:30px;
+}
+
+#login-container {
+  margin-top:30px;
+  padding-top: 0px;
+  width:500px; 
+}
+
+#login-container .row .center {
+  float: none; 
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+
+h4.panel-title a,
+h5.panel-title a {
+  font-size:12px;
+}
+
+#panel-top {
+  padding:10px;
+}
+
+.panel-ddd-heading {
+  background-color:#ddd !important;
+}
+
+.tabbable {
+  margin-top:40px;
+}
+
+/* this was on parties/show */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: #999999 !important;
+    color:white !important; 
+}
+
+.tab-content {
+  border-top:5px solid #999;
+}
+
+input[value="Log In"] {
+  margin-top:10px;
+}
+
+.no-account {
+  padding-right:3px;
+}
+
+.glyphicon-step-forward {
+  padding-left:3px;
+  padding-right:3px;
+}
+.signed-up {
+  padding-right:5px;
+}
+.pad5 {
+  padding:5px;
+}
+
+.form-inline .form-group input {
+    width:300px;
+}
+
+.form-inline .form-group select {
+    width:200px;
+}

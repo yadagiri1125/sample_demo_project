@@ -1,0 +1,36 @@
+<div class='pull-left col-xs-2'>
+  <span><%= label_tag :video, 'VIDEO', class: 'format_border' %></span>
+  <div class='clear_with_height_20'></div>
+  <%= label_tag :video_accepted_flag, 'Video' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :preroll_accepted_flag, 'Pre-roll' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :midroll_accepted_flag, 'Mid-roll' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :postroll_accepted_flag, 'Post-roll' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :overlay_accepted_flag, 'Overlay' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :iab_vast_certified_accepted_flag, 'IAB Vast Certified' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :iab_vpaid_certified_accepted_flag, 'IAB Vpaid Certified' %>
+</div>
+
+<div class='pull-right col-xs-7' id='format_accepted'>
+  <div class='accepted_border'><span class='accepted_heading'>ACCEPTED</span></div>
+  <div class='clear_with_height_20'></div>
+  <%= f.input :video_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :preroll_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :midroll_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :postroll_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :overlay_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :iab_vast_certified_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :iab_vpaid_certified_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+</div>

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :seed_data
+  after_action :seed_data
 
   def sample1
   	my_path

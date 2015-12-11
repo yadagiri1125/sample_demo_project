@@ -1,0 +1,22 @@
+<div class='clear_with_height_20'></div>
+<%= f.input search_field.to_sym, label: input_field.upcase+' Search',
+            input_html: { id: segment+'_search_field',class: 'form-control col-xs-6', type: 'no_submit' }  %>
+<%= link_to 'Search', '#', class: 'btn btn-primary', id: 'search_'+segment  %>
+<div class='clear_with_height_20'></div>
+<div id='search_result_<%= segment %>'></div>
+<%= f.input input_field.to_sym, label: input_field.upcase+' Name',
+            input_html: {class: 'form-control col-xs-10 pull-left', readonly: true,
+                         value: (obj.characteristic_id.nil? || obj.id.nil?) ? '' : select_obj(Dma,obj.characteristic_id).name} %>
+<%= f.hidden_field :characteristic_id %>
+<div class='clear_with_height_20'></div>
+<script>
+    // to populate input value for search param
+    $('#search_<%= segment %>').on('click', function(e) {
+        e.preventDefault();
+        $.ajax({
+            data:'facility_search='+ $('#<%= segment %>_search_field').val(),
+            type:'get',
+            url: '/<%= segment.pluralize %>'
+        })
+    });
+</script>

@@ -1,0 +1,8 @@
+<div id="<%= seg %>_count">
+    <span class='count'>
+      <%= obj.send(seg).present? ? (size - obj.send(seg).length) : size %>
+    </span>
+    <span class='character'>
+      <%= obj.send(seg).present? ? 'Characters Left' : 'Characters Max' %>
+    </span>
+</div>

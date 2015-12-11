@@ -11,7 +11,24 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.validate
+//= require jquery.tablesorter
 //= require jquery_ujs
-//= require turbolinks
+// require jquery.ui.datepicker
 //= require bootstrap/bootstrap
+//= require dms_home
+//= require special_feature
+//= require production_tab_validation
+//= require general_tab_validation
+//= require title_validations
+//= require master_data_validations
+//= require addressing_tab_validation
+//= require multirow_text
+//= require metric_tab_validation
+//= require programming_tab_validation
+//= require marketing_opp_tab_validation
+//= require dates_tab_validation
+//= require select_tab_validation
+//= require affiliations_tab_validations
 //= require_tree .
+//

@@ -1,0 +1,16 @@
+<table id='<%= segment %>_table' class='<%= specific_css_class %> width-85 table table-bordered'>
+  <% unless objs.each_hit_with_result.first.nil? %>
+      <% objs.each_hit_with_result do |hit,facility| %>
+          <tr>
+            <td><%= facility.name %></td>
+            <td class='pull-right'><%= link_to 'select','#', id: 'select_'+segment, onclick: "fill_#{segment}_name('#{facility.name}','#{facility.id}'); return false;" %></td>
+          </tr>
+      <% end %>
+  <% else %>
+      <tr>
+        <td>No Records Found</td>
+      </tr>
+      </table>
+  <% end  unless objs.blank? %>
+</table>
+<div class='clear_with_height_20'></div>

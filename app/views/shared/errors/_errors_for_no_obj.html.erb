@@ -1,0 +1,11 @@
+<% if arr.present? %>
+    <div id="error_explanationx" class="alert  alert-danger">
+      <a href="#" class="close" data-dismiss="alert">x</a>
+      <h4><%= pluralize(arr.uniq.count, "error") %> prohibited this record from being saved:</h4>
+      <ul>
+        <% arr.uniq.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

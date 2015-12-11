@@ -1,0 +1,32 @@
+<table class='table col-xs-12 pull-left'>
+  <thead>
+  <tr class='grey_color'>
+    <td width='35%'>Email Type</td>
+    <td width='50%'>Email</td>
+    <td width='15%'>Actions</td>
+    <td></td>
+  </tr>
+  </thead>
+  <tbody id='email_display'>
+  <% unless master_object.emails.reload.blank? %>
+      <% master_object.emails.reload.each do |email| %>
+          <tr>
+            <td><%= email.email_type_cdlk.description %></td>
+            <td>
+                <span data-toggle='tooltip' data-placement='bottom' title=<%= email.email %>>
+                    <%= truncate(email.email, length: 20) %>
+                </span>
+            </td>
+            <td>
+              <%= link_to '', edit_email_path(email, "#{master_object.class.name.downcase}_id" => master_object.id), remote: true , class: 'glyphicon glyphicon-edit padding-right-20', title: 'Edit Email', rel: 'tooltip' %>
+              <%= link_to '', email_path(email,"#{master_object.class.name.downcase}_id" => master_object.id), method: :delete, data: { confirm: 'Are you sure?'} , remote: true, class: 'glyphicon glyphicon-remove padding-right-20', title: 'Delete Email', rel: 'tooltip' %>
+            </td>
+          </tr>
+      <% end %>
+  <% else %>
+      <tr>
+        <td colspan='5' class="text-center">No records found</td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

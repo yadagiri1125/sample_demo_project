@@ -1,0 +1,8 @@
+/*-----------------------CSS For Marketing Opp Segment-------------------------------------*/
+#marketing_opps label, #marketing_text label{width: 14%;}
+/*-----------------------End Of CSS For Marketing Opp Segment------------------------------*/
+
+/*-----------------------CSS For Event Budget Segment-------------------------------------*/
+#event_budget .error{width: auto !important;margin-left: 23%;}
+#event_sponsors .error{margin-left: 11% !important;}
+/*-----------------------End Of CSS For Event Budget Segment------------------------------*/

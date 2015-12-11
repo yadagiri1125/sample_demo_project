@@ -1,0 +1,39 @@
+<% @dnt_platform ||= DntPlatform.new %>
+<%= simple_form_for(@dnt_platform, remote: true, html: {class: 'customize_simple_form',id: 'form_dnt_platforms'}) do |f| %>
+    <%= render 'shared/user_detail_for_segment', obj: @dnt_platform, f: f, segment: 'dnt_platforms' %>
+    <%= hidden_field_tag :segment_detail_id, sub_seg.id %>
+    <div id='dnt_platforms_errors'></div>
+    <div id='dnt_platforms_flash_notice' class='collapse' ></div>
+    <div class='clear_with_height'></div>
+    <div class='pull-left col-xs-2'>
+      <div class='platform_border'><span>PLATFORMS</span></div>
+      <div class='clear_with_height_20'></div>
+      <%= f.label :desktop_accepted_flag, 'Desktop' %>
+      <div class='clear_with_height_5'></div>
+      <%= f.label :desktop_accepted_flag, 'Mobile' %>
+      <div class='clear_with_height_5'></div>
+      <%= f.label :desktop_accepted_flag, 'Tablet' %>
+      <div class='clear_with_height_5'></div>
+      <%= f.label :desktop_accepted_flag, 'Connected Tv' %>
+    </div>
+    <div class='pull-right col-xs-7' id='platform_accepted'>
+      <div class='accepted_border'><span class='accepted_heading'>ACCEPTED</span></div>
+      <div class='clear_with_height_20'></div>
+      <%= f.input :desktop_accepted_flag, as: :radio_buttons, collection: radio_options, label:false %>
+      <div class='clear_with_height'></div>
+      <%= f.input :mobile_accepted_flag, as: :radio_buttons, collection: radio_options, label:false %>
+      <div class='clear_with_height'></div>
+      <%= f.input :tablet_accepted_flag, as: :radio_buttons, collection: radio_options, label:false %>
+      <div class='clear_with_height'></div>
+      <%= f.input :connected_tv_accepted_flag, as: :radio_buttons, collection: radio_options, label:false %>
+    </div>
+    <div class='clear_with_height'></div>
+<% end %>
+
+<script>
+    $('#reset_dnt_platforms').click(function(){
+        $('#dnt_platforms_form form')[0].reset();
+    });
+
+    $('#form_dnt_platforms :input[type=radio]').attr('disabled',<%= current_party.published? %>);
+</script>

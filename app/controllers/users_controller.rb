@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
+
+  layout 'users_layout'
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    render :layout => 'keywords'
   end
 
   # GET /users/1

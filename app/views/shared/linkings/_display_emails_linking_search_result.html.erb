@@ -1,0 +1,24 @@
+<% unless email_objs.blank? %>
+    <% unless email_objs.each_hit_with_result.first.nil? %>
+        <%= render 'shared/linkings/email_shared_header' %>
+        <% selected_objs_ids = selected_objs ? selected_objs.collect{|object| object.xref_id } : nil %>
+        <% email_objs.each_hit_with_result do |hit,email_obj| %>
+            <tr id='tr_<%= email_obj.id %>'>
+              <td align="center">
+                <% selected = (selected_objs_ids ? selected_objs_ids.include?(email_obj.id) : false) %>
+                <%= check_box_tag email_obj.party.name, email_obj.id, selected ,disabled: selected, title: (selected ? 'Already Added' : '') %>
+              </td>
+              <td>
+                <%= h email_obj.party.name %>
+              </td>
+              <td><%= email_obj.email_type_cdlk.description %></td>
+              <td colspan="2" class='word_wrap'><%= email_obj.email %></td>
+            </tr>
+        <% end %>
+    <% else %>
+        <%= render 'shared/linkings/email_shared_header' %>
+        <tr><td colspan='4'>No records found</td></tr>
+    <% end %>
+<% end %>
+
+

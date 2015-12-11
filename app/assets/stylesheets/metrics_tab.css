@@ -1,0 +1,8 @@
+#time_period_of_metrics label{width: 25%;padding-left: 0 !important;}
+#time_period_of_metrics .error{margin-left: 28% !important;}
+#time_period_of_metrics{padding-left: 0 !important;}
+#metric_category label{width: 60%;}
+#metric_category .error{width: 100% !important; margin-left: 1%;}
+.table > tbody > tr > th, .table > tbody > tr > td{padding: 5px !important;}
+.ui-timepicker-wrapper{width: 9.5em !important;}
+.time_place_holder{font-weight: bold;color: gray;margin-left: 10%;}

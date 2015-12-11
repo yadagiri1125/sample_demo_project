@@ -1,0 +1,17 @@
+
+<% unless  @party.nil? %>
+<div class="row pad5">
+
+  <div class="col-md-8">
+      <span class="d-label">Mid: </span><%= @party.mid %>
+      <span class="d-label">Media Name: </span> <%= @party.name %>
+      <span class="d-label">Media Type: </span><%= @party.media_type.name %>
+  </div>
+
+  <div class="col-md-4 text-right">
+       &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/parties"  title="Close Datacard"><span class="glyphicon glyphicon-folder-close"></span></a>
+     </div>      
+  </div>
+
+<% end %>

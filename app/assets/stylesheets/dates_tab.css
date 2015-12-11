@@ -1,0 +1,6 @@
+/*-----------------------CSS For Event Duration Segment------------------------------*/
+#start_on .error, #duration .error{clear: left; width: auto !important; margin-left: 23%;}
+#end_on .error{clear: left; width: 24% !important; margin-left: 9%;}
+#end_on label{width: 5% !important;}
+.override_width{width: 60% !important;}
+/*-----------------------End of CSS For Event Duration Segment---------------------*/

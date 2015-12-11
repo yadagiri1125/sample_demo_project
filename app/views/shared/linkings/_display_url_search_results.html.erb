@@ -1,0 +1,22 @@
+<% unless url_obj.blank? %>
+    <% unless url_obj.each_hit_with_result.first.nil? %>
+        <%= render 'shared/linkings/url_header' %>
+        <% selected_objs_ids = selected_objs ? selected_objs.collect{|object| object.xref_id } : nil %>
+        <% url_obj.each_hit_with_result do |hit,url_object| %>
+            <tr id='tr_<%= url_object.id %>'>
+              <td>
+                <% selected = (selected_objs_ids ? selected_objs_ids.include?(url_object.id) : false) %>
+                <%= check_box_tag url_object.party.name, url_object.id, selected, disabled: selected, title: (selected ? 'Already Added' : '') %>
+              </td>
+              <td>
+                <%= h url_object.party.name %>
+              </td>
+              <td><%= url_object.url_type_cdlk.description %></td>
+              <td colspan="2" class='word_wrap'><%= url_object.url %></td>
+            </tr>
+        <% end %>
+    <% else %>
+        <%= render 'shared/linkings/url_header' %>
+        <tr><td colspan='4'>No records found</td>
+    <% end %>
+<% end %>

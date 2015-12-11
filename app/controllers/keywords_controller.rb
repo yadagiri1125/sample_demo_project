@@ -1,5 +1,6 @@
 class KeywordsController < ApplicationController
   # include SegmentSupport
+  layout 'keywords'
   before_action  :load_keywords 
   before_action :set_keyword, only: [:edit, :update, :destroy]
   # before_action :require_login, :reload_on_published

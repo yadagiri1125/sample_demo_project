@@ -1,0 +1,20 @@
+<div class='pull-left col-xs-2'>
+  <span><%= label_tag :display, 'DISPLAY', class: 'format_border' %></span>
+  <div class='clear_with_height_20'></div>
+  <%= label_tag :image_accepted_flag, 'Image' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :flash_accepted_flag, 'Flash' %>
+  <div class='clear_with_height_5'></div>
+  <%= label_tag :rich_media_accepted_flag, 'Rich Media' %>
+  <div class='clear_with_height_5'></div>
+</div>
+<div class='pull-right col-xs-7' id='format_accepted'>
+  <div class='accepted_border'><span class='accepted_heading'>ACCEPTED</span></div>
+  <div class='clear_with_height_20'></div>
+  <%= f.input :image_accepted_flag, as: :radio_buttons, collection:  [['Yes','Y'],['No','N'],['Not Reported','']], label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :flash_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+  <%= f.input :rich_media_accepted_flag, as: :radio_buttons, collection: radio_option_selection, label:false %>
+  <div class='clear_with_height'></div>
+</div>

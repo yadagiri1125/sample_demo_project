@@ -1,0 +1,9 @@
+<div class='btn-group pull-right user_details'>
+    <span>
+      <% if obj.present?  %>
+          <i class='icon-user'></i> <%= obj.segment.user.username %> |
+          <span><%= obj.updated_at.strftime('%m/%d/%Y') %></span>
+      <% end %>
+      <%= f.submit 'SAVE', class: 'custom btn btn-default' unless current_party.published? %>
+    </span>
+</div>

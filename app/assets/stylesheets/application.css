@@ -11,15 +11,62 @@
  *= require_self
  *= require_tree .
  *= require bootstrap/bootstrap
+ *= require production_tab
+ *= require dms_home
+ *= require ie-only
+ *= require general_tab
+ *= require select_tab
+ *= require all_width_margins
+ *= require metrics_tab
+ *= require dates_tab
+ *= require addressing_tab.css
+ *= require affliations_tab
  */
 
-.user_list{
-    margin-left: 27%;
-    margin-top: -245%;
-    background-color:cyan;
+body {
+
+  padding-top: 100px;
 }
 
-.raghu{
-    background-color:cyan;
+.form-group input {
+    width:300px;
 }
 
+.form-group select {
+    width:200px;
+}
+
+/*
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+*/
+
+select.date-select {
+  width:auto;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  display: inline;
+}
+
+.fieldset {
+  border:1px solid #ccc;
+  padding:10px;
+}
+
+.legend {
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  width: auto;
+  padding:0 10px;
+  border-bottom:none;
+
+}
+
+
+/* navbar styles */
+/*.active {
+ background-color:blue; // Change the color 
+}*/

@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @fast.name %>
+  <%= @fast.name unless @fast.nil? %>
 </p>
 
 <%= link_to 'Edit', edit_fast_path(@fast) %> |

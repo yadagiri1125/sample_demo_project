@@ -1,0 +1,29 @@
+<div id='title_common_fields'>
+  <div class='form-group'>
+      <%= label_tag 'Title'%>
+      <%= text_field_tag :name, current_party.name, class: 'form-control col-xs-10' %>
+  </div>
+  <div class='clear'></div>
+  <div class='form-group' id='title_name'>
+    <div class='form-group'>
+      <%= label_tag 'Subtitle'%>
+      <%= text_field_tag :subtitle, current_party.subtitle, class: 'form-control col-xs-10' %>
+    </div>
+  </div>
+  <div class='clear_with_height'></div>
+  <div class='form-group'>
+      <%= label_tag 'Title Sort'%>
+      <%= text_field_tag :sort_name, current_party.sort_name, class: 'form-control col-xs-10' %>
+    </div>
+    <div class='clear_with_height'></div>
+    <div class='form-group'>
+      <%= label_tag 'Search As'%>
+      <%= text_field_tag :search_name, current_party.search_name, class: 'form-control col-xs-10' %>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+      $('#title_common_fields input').prop('disabled', true);
+  })
+</script>

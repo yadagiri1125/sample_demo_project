@@ -1,0 +1,7 @@
+$('#dm_dnet_flash_notice,#dm_dnet_errors').hide();
+<% if @dm_dnet.errors.any? -%>
+    $('#dm_dnet_errors').html("<%= j render 'shared/errors/errors', object: @dm_dnet  %>").show();
+<% else -%>
+    $('#dm_dnet_form').html("<%= j render 'dm_dnets/form' , sub_seg:  @sub_seg %>");
+    $('#dm_dnet_flash_notice').html("<%= j render 'shared/flash_mesg' %>").show(300).delay(1000).hide(300);
+<% end -%>

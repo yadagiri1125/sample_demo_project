@@ -1,0 +1,130 @@
+/* custom margins */
+.mrgn_1 {margin: 1%;}
+.mrgn_lft_1{ margin-left: 1%; }
+.mrgn_lft_2{ margin-left: 2%; }
+.mrgn_lft_3{ margin-left: 3%; }
+.mrgn_lft_4{ margin-left: 4%; }
+.mrgn_lft_5{ margin-left: 5%; }
+.mrgn_lft_6{ margin-left: 6% }
+.mrgn_lft_7{ margin-left: 7% }
+.mrgn_lft_8{ margin-left: 8% }
+.mrgn_lft_10{ margin-left: 10%; }
+.mrgn_lft_11{ margin-left: 11%; }
+.mrgn_lft_12{ margin-left: 12%; }
+.mrgn_lft_13{ margin-left: 13%; }
+.mrgn_lft_13_xl{ margin-left: 13.5%; }
+.mrgn_lft_15{ margin-left: 15%; }
+.mrgn_lft_17{ margin-left: 17%; }
+.mrgn_lft_22{ margin-left: 22%; }
+.mrgn_lft_24{ margin-left: 24%; }
+.mrgn_lft_31{ margin-left: 31%; }
+.mrgn_lft_36{ margin-left: 36%; }
+.mrgn_lft_45{ margin-left: 45%; }
+.mrgn_top_1{ margin-top: 0.5% }
+.mrgn_top_3{ margin-top: 3% }
+.mrgn_top_4_neg{ margin-top: -4%; }
+.mrgn_lft_1_neg{ margin-left: -1%; }
+.mrgn_lft_2_neg{ margin-left: -2%; }
+.mrgn_lft_3_neg{ margin-left: -3%; }
+.mrgn_lft_5_neg{ margin-left: -5%; }
+.mrgn_lft_6_neg {margin-left: -6%;}
+.mrgn_lft_9_neg{ margin-left: -9%; }
+.mrgn_lft_28{margin-left: 28%;}
+.mrgn_lft_1_xl_neg{ margin-left: -1.5%; }
+.mrgn_top_41px_neg {margin-top: -41px;}
+.margin-top-64px{margin-top: -64px;}
+.mrgn_top_1x{ margin-top: 1% !important; }
+.mrgn_rght_4{margin-right: 4%;}
+.mrgn_rgt_3{margin-right: 3% !important;}
+.mrgn_rgt_4_neg{margin-right: -4% !important;}
+.mrgn_lft_1{margin-left: 1% !important;}
+.mrgn_rt_1{margin-right: 1% !important;}
+.mrgn_rt_2{margin-right: 2% !important;}
+
+/* custom widths */
+.col-xs-6-x{width: 64% !important;}
+.col-xs-10_per{width: 10% !important;}
+.width-12{width:12% !important;position: relative; min-height: 1px; float: left;}
+.width-250{width: 250% !important;}
+.width-auto-label label{width: auto !important;}
+.width-75{width: 75% !important;}
+.width-21{width: 21% !important;}
+.width-70{width: 70% !important;}
+.width-85{width: 85% !important;}
+.width-50{width: 50% !important;}
+.width-10{width: 10% !important;}
+.width-28{width: 28% !important;}
+.width-100{width: 100% !important;}
+.width-40{width: 40% !important;}
+.width-46{width: 46% !important;}
+.max-width-16{max-width: 16% !important;}
+.max-width-25{max-width: 25% !important;}
+.width-30{max-width: 30% !important;}
+.width-37{width: 37% !important;}
+.width-auto{width: auto !important;}
+.width-none{width: none !important;}
+.width-150{width: 150px !important;}
+.width-49{width: 49% !important;}
+.width-23{width: 23% !important;}
+.width-76{width: 76% !important;float: left;}
+.width-79{width: 79% !important;}
+.width-65{width: 65% !important;float: left;}
+.width-20{width: 20% !important; float: left;}
+.width-40 label{width: 40% !important;}
+.width-35 label{width: 35% !important;}
+.width-13 label{width: 13% !important;}
+.width_15{width: 15% !important;}
+.width-87 {width: 87% !important;}
+.width-5 {width: 5% !important;}
+.width-270 {width: 270%;}
+.width-60{width: 62.333333%!important;}
+.width-82 {width: 82% !important;}
+.width-72 {width: 72% !important;}
+.width-84 {width: 84% !important;}
+.width-193px {width: 193px !important;}
+.width-9{width: 9.5%;}
+
+.col-xs-40-x{width: 40.5% !important;}
+.col-xs-65-x{width: 65% !important;}
+.col-xs-50-l{width: 51% !important;}
+.col-xs-52-x{width: 52% !important;}
+.col-xs-35-l{width:35% !important;}
+.col-xs-60-l{width:60% !important;}
+.col-xs-40-l{width:40% !important;}
+
+.ot_width_49{ width: 49%; }
+.ot_width_54{ width: 54% !important; }
+
+.width-94{width: 94% !important;
+    min-height: 1px;
+    position: relative;
+    float: left;
+}
+.width-89{
+    width: 89% !important;
+    min-height: 1px;
+    position: relative;
+    float: left;
+}
+
+.width-18-label label{width: 18% !important;}
+
+/* custom paddings */
+.padding-2 {padding: 2%;}
+.padding_cmn{ padding: 20px;}
+.padding_1 {padding: 1%;}
+.padding_0_xl {padding: .5%;}
+.padding_top_2 {padding-top: 2%;}
+.padding-6px-7px{padding: 6px 7px !important;}
+.padding-15{padding: 15px;}
+.padding-0{padding: 0 !important;}
+.padding-top-6{padding-top: 6px !important;}
+.padding-right-20{padding-right: 20%;}
+.padding-right-5{padding-right: 5px;}
+.padding_6{padding:6px;}
+.padding_lft_17{padding-left: 17%;}
+.padding_lft_2{padding-left: 2%;}
+.padding_lft_1 {padding-left: 1%;}
+.padding_10 {padding: 10px;}
+.padding_lft_13 {padding-left: 13% !important;}
+.padding_lft_5 {padding-left: 5px;}

@@ -1,0 +1,20 @@
+#update_frequency label{width: 30%; text-align: left;}
+#update_frequency .error{margin-left: 33%;}
+/*----------------------------------------CSS for Dnet------------------------------*/
+.hearder_border{ border-bottom: 2px solid gray;display: inline-block;text-align:center;}
+.hearder_border_amount{ border-bottom: 2px solid gray;display: inline-block;margin-left: 22.3%;width:10%;text-align:center;}
+.hearder_border_quatity{ border-bottom: 2px solid gray;display: inline-block;margin-left: 2%;width:10%;text-align:center;}
+#total_file_section{margin-left: 46%;}
+.female_pct_field label{margin-left: 10% !important;}
+#form_dm_dnet .error{margin-left: -11% !important;margin-top: 39px;margin-right: -50%;}
+#min_order_section .error{margin-left: -10.5% !important;margin-top: 39px;margin-right: -50%;}
+#quantity .error{margin-left: -204px !important;margin-top: 39px;margin-right: -50%;}
+#total_file_section .error{margin-left: -115px !important;margin-top: 39px;margin-right: -50%;}
+#average_unit_of_sale .error{margin-left: -8% !important;margin-top: 39px;margin-right: -50%;}
+#average_unit_of_sale label {width: 12% !important;margin-left: -12px;margin-right: 0% !important;}
+#gender_age .error{margin-left: -122px !important;margin-top: 39px;margin-right: -50%;}
+#form_dm_dnet label {width: 130px !important;margin-left: 7px;margin-right: -30px;}
+#form_dm_dnet .checkbox input[type="checkbox"] {margin-top: 4px;margin-left: 10px;}
+#form_dm_dnet .form-control {height:42px;}
+#dm_dnet_min_order_amt,#dm_dnet_min_order_qty{ width: 10% !important; }
+/*----------------------------------------End of CSS for Dnet -------------------------*/

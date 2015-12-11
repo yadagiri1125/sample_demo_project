@@ -1,0 +1,8 @@
+<div class='btn-group pull-right url_user_details'>
+  <% unless obj.nil?  %>
+      <i class='glyphicon glyphicon-user'></i> <%=  obj.segment.user.username  %> |
+      <span>
+        <%=  obj.segment.updated_at.strftime('%m/%d/%y') %>
+      </span>
+  <% end %>
+</div>

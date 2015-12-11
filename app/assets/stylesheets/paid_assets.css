@@ -1,0 +1,13 @@
+/*---------------------CSS For Paid Url Segment---------------------------*/
+#paid_url_type .error, #paid_url .error{margin-left: 0 !important;}
+/*---------------------End of CSS For Paid Url Segment--------------------*/
+
+/*-----------------------CSS for Positioning Statement----------------------*/
+#positioning_statement_input .error{margin-left: 0;width: auto !important;}
+.height_54{height: 54px !important;}
+.break_span_word{display: block;width: 93%; word-break: break-all;}
+/*-----------------------End Of CSS for Positioning Statement--------------*/
+
+/*-----------------------CSS for FMO----------------------*/
+#fmo_border {border: 1px solid #c0c0c0; border-radius: 5px; padding: 10px;}
+/*-----------------------End of CSS for FMO----------------------*/

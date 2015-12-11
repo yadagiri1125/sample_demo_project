@@ -1,0 +1,51 @@
+  <span class='hearder_border mrgn_lft_10 width-9'>AMOUNT</span>
+  <span class='hearder_border mrgn_lft_4 width-9'>QUANTITY</span>
+  <span class='hearder_border_amount'>AMOUNT</span><span class='hearder_border_quatity'>QUANTITY</span>
+  <div class='clear_with_height_25'></div>
+  
+  <%= label_tag '','Minimum Order' %>
+  <%= f.input :min_order_amt,as: :string, label: false,input_html: { class: 'form-control col-xs-1 decimal_field'} %>
+  <%= f.input :min_order_qty,as: :string, label: false,input_html: {class: 'form-control col-xs-1 mrgn_lft_4'} %>
+  <div id ='total_file_section'>
+    <%= label_tag '','Total File' %>
+    <%= f.input :total_file_amt,as: :string, label: false,input_html: { class: 'form-control col-xs-2 decimal_field'} %>
+    <%= f.input :total_file_qty, label: false,input_html: {class: 'form-control col-xs-2 mrgn_lft_4'} %>
+  </div>
+  <div class='clear_with_height_20'></div>
+  <%#= f.input :currency_cdlk_id , collection: select_options(CurrencyCdlk), prompt: 'Please Select',
+              input_html: { class: 'form-control col-xs-2 dynamic_name_field',id: 'currency_cdlk_id'}, label: 'Currency Code'%>
+  <div class='clear_with_height'></div>
+  <%= f.input :company_size,input_html: { id: 'company_size'}, label: 'Company Size' %>
+  <%= f.input :phone,input_html: { id: 'phone'} %>
+  <%= f.input :enchanced,input_html: { id: 'enchanced'}%>
+  <%= f.input :sic_industry,input_html: { id: 'sic_industry'}, label: 'SIC Industry'%>
+  <%= f.input :name_home_address,input_html: { id: 'name_home_address'}, label: 'Name Home Address'%>
+  <div class='clear_with_height_20'></div>
+  <%= f.input :gender,input_html: { id: 'gender'} %>
+  <%= f.input :email,input_html: { id: 'email'} %>
+  <%= f.input :title_slugging,input_html: { id: 'title_slugging'}, label: 'Title Slugging'%>
+  <%= f.input :job_title,input_html: { id: 'job_title'}, label: 'Job Title'%>
+  <%= f.input :job_function,input_html: { id: 'job_function'}, label: 'Job Function'%>
+  <div class='clear_with_height_20'></div>
+  <div id='quantity'>
+    <%= f.input :change_address,input_html: { id: 'change_address'}, label: 'Change Address' %>
+    <%= f.input :change_address_qty,as: :string, label: 'Quantity',input_html: {class: 'form-control col-xs-2 ',
+                                                                                id: 'change_address_qty'} %>
+    <div class='clear_with_height_20'></div>
+    <%= f.input :hotline,input_html: { id: 'hotline'} %>
+    <%= f.input :hotline_qty,as: :string, label: 'Quantity',input_html: {class: 'form-control col-xs-2 ',
+                                                                         id: 'hotline_qty'} %>
+  </div>
+  <div class='clear_with_height_20'></div>
+  <div id='gender_age'>
+    <%= label_tag 'gender' %>
+    <%= f.input :gender_male_pct,as: :string,label:'Male %',input_html: { class: 'form-control col-xs-1 mrgn_rght_4 '} %>
+    <%= f.input :gender_female_pct,as: :string,label:'Female %',input_html: { class: 'form-control col-xs-1 mrgn_rght_4'} %>
+    <div class='clear_with_height_20'></div>
+    <%= label_tag 'Age' %>
+    <%= f.input :age_average,as: :string,label:'Average',input_html: { class: 'form-control col-xs-1 mrgn_rght_4'} %>
+    <%= f.input :age_from,as: :string,label:'From',input_html: { class: 'form-control col-xs-1 mrgn_rght_4'} %>
+    <%= f.input :age_to,as: :string,label:'To',input_html: { class: 'form-control col-xs-1 mrgn_rght_4 '} %>
+  </div>
+  <div class='clear_with_height_20'></div>
+  <%= f.input :average_unit_of_sale,input_html: { class: 'form-control col-xs-1 decimal_field',id: 'average_unit_of_sale'}, label: 'Average Unit Of Sale' %>

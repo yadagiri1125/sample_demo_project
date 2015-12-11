@@ -1,0 +1,23 @@
+<% unless person_obj.blank? %>
+    <% unless person_obj.each_hit_with_result.first.nil? %>
+        <%= render 'shared/linkings/person_linking_header_search' %>
+        <% selected_objs_ids = selected_objs ? selected_objs.collect{|object| object.xref_id } : nil %>
+        <% person_obj.each_hit_with_result do |hit, personal| %>
+            <tr id='tr_<%= personal.id %>'>
+              <td>
+                <% selected = (selected_objs_ids ? selected_objs_ids.include?(personal.id) : false) %>
+                <%= check_box_tag personal.party.name, personal.id, selected , disabled: selected, title: (selected ? 'Already Added' : '')  %>
+              </td>
+              <td>
+                <%= h personal.party.name %>
+              </td>
+              <td colspan="3" class='word_wrap'><%= display_person_detail(personal) %></td>
+            </tr>
+        <% end %>
+    <% else %>
+        <%= render 'shared/linkings/person_linking_header_search' %>
+        <tr>
+          <td colspan='4'>No records found</td>
+        </tr>
+    <% end %>
+<% end %>

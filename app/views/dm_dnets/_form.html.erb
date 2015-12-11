@@ -1,0 +1,28 @@
+<% @dm_dnet ||= DmDnet.new %>
+
+<%= simple_form_for(@dm_dnet, remote: true,html: {class: 'customize_simple_form ' ,id: 'form_dm_dnet'}) do |f| %>
+    <div class="clear_with_height"></div>
+
+    <%= render 'keywords/user_detail_for_segment', f: f, segment: 'dm_dnet' %>
+
+    <div class="clear_with_height_25"></div>
+
+
+    <div id='dm_dnet_flash_notice' class='collapse'></div>
+    <div id='dm_dnet_errors'></div>
+    <%#= hidden_field_tag :segment_detail_id, sub_seg.id %>
+    <div class = 'mrgn_lft_2'>
+      <%= render 'dm_dnets/dnet_fields', f: f, dm_dnet: @dm_dnet %>
+    </div>
+<% end %>
+
+<script>
+    check_decimal_parsing(2);
+    // $('#form_dm_dnet :input').attr('disabled',<%#= current_party.published? %>);
+    $('#reset_dm_dnet').click(function(){
+        $('#form_dm_dnet form')[0].reset();
+        $('#form_dm_dnet').data("validator").cancelSubmit = true;
+    });
+    // $('#form_dm_dnet').validate(dm_dnet_validation_options);
+</script>
+

@@ -1,0 +1,14 @@
+<div class='btn-group pull-right user_details'>
+    <span>
+      <% if party.user.present? && display_user  %>
+          <i class='icon-user'></i> <%= party.user.username  %> |
+          <span>
+            <%= party.updated_at.strftime('%m/%d/%Y') if party.updated_at.present? %>
+          </span>
+      <% end %>
+      <% unless party.published? %>
+          <%= f.submit 'RESET', class: 'custom btn btn-default', id: 'reset_'+ segment %>
+          <%= f.submit 'SAVE' , class: 'custom btn btn-default', id: 'save_'+ segment  %>
+      <% end %>
+    </span>
+</div>

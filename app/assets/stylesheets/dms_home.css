@@ -1,0 +1,365 @@
+/* Write all the styles related to the application. It will be included in application.css.*/
+
+
+/*--------------------------------------------Common CSS for all segments-----------------------------------------------*/
+
+/* ------Cursor styling--------------------------------- */
+.cursor_styling{cursor: pointer;}
+.cursor_not_allowed{cursor: not-allowed;}
+/*-------------------------------------------------------*/
+
+/*-------------Background Styling ----------------------*/
+.gray_background{ background-color: gray;}
+/*------------------------------------------------------*/
+#expand_collapse_border {border: 1px solid #c0c0c0; border-radius: 5px; padding: 10px;}
+.custom.btn.btn-default {background: #ffffff !important;}
+.bold{font-weight: bold;}
+/*------------------------------------------------------*/
+
+.clear_with_height{ clear:both; height: 10px; }
+.clear_with_height_5{ clear:both; height: 5px; }
+.clear_with_height_10{ clear:both; height: 10px; }
+.clear_with_height_20{ clear:both; height: 20px; }
+.clear_with_height_50{ clear:both; height: 50px; }
+.clear_with_height_25{ clear:both; height: 25px; }
+.clear{ clear: both; }
+
+.customize_simple_form label.custom_required:after{content:" *"; color: red;}
+abbr[title], abbr[data-original-title]{ color: red !important;border: none !important; }
+
+.blocks { display: inline-block; border: solid 1px red; width: 18%; }
+
+.text_area_resizing{ resize: none; }
+:hover, :focus { color: none; }
+a { color: inherit; }
+.rotate_icon {transform: rotate(90deg);}
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+table.tablesorter thead tr .header {
+    background-image: url(up_down.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}
+/* CSS for Select Tag*/
+select::-ms-expand {
+    display: none; /* hide default arrow in IE10 */
+}
+
+input::-moz-outer-spin-button,
+input::-moz-inner-spin-button {
+    -moz-appearance: none;
+    margin: 0;
+}
+
+/*firefox remove the dotted lines in this drop-down */
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+.right_arrow{ top: 3px; left: 10px; }
+
+/*.date_picker_image{ margin-left: 1%;margin-top: 1%;cursor: pointer; }*/
+legend{ margin-bottom: 5px !important; }
+
+
+/*used to remove link color on mouse hover*/
+a:link { background-color: transparent !important; }
+
+/* text-field sizes */
+
+/*This CSS will use for all field set inside application*/
+fieldset.scheduler-border{
+    border: 1px solid #c0c0c0;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.01);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.9s;
+}
+/*This CSS will use for all legend inside application*/
+legend.scheduler-border{
+    font-size: 1em;
+    text-align: left;
+    width:auto;
+    padding:0 10px;
+    border-bottom:none;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #999999 !important;
+    color: #FFFFFF;
+}
+
+/*Hide Spin Button From Chrome Browser*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+/*----------------------------------------------------------------------*/
+
+/*------------Common Customize simple form styling-------------------*/
+.color-red{ color: red; }
+.help-inline{ padding: 5px; color: red !important; }
+
+#count{float:right; margin-right:35px;}
+
+.customize_simple_form label {
+    float: left;
+    width: 102px;
+    text-align: left;
+    margin: 2px 10px;
+}
+.customize_simple_form_no_width label {
+    float: left;
+    text-align: right;
+    margin: 2px 10px;
+}
+
+.customize_simple_form div.input { margin-bottom: 10px;}
+.customize_simple_form .checkbox input[type="checkbox"]{  margin-top: 4px;}
+
+.customize_simple_form label.custom_required:after{content:" *"; color: red;}
+.customize_simple_form_credit label {
+    float: left;
+    width: 161px;
+    text-align: right;
+    margin: 2px 2px;
+}
+.customize_simple_form_credit_no_width label {
+    float: left;
+    text-align: right;
+    margin: 2px 10px;
+}
+
+.customize_simple_form_credit div.input {margin-bottom: 10px;}
+.customize_simple_form_credit .checkbox input[type="checkbox"]{ margin-top: 4px;}
+
+table#to_be_published tr:nth-child(1) td:first-child label{
+    text-align: left;
+    width: 110px;
+    display: inline-block;
+    font-weight: normal;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.error {
+    color: #FF0000 !important;
+    padding: 5px;
+    position: relative;
+    width: auto !important;
+}
+
+
+#email_field_form label, #url_field_form label{
+    width: 12% !important;
+    float: left !important;
+    margin: 2px 10px;
+}
+
+.address_field_form label{
+    width: 12% !important;
+    float: left !important;
+    margin: 2px 10px;
+}
+
+.grey_color{background: #D3D3D3;}
+.align-center{text-align: center;}
+
+.ui-datepicker-trigger {
+  margin-top: 3px;
+}
+
+.glyphicon {
+    padding-top:2px;
+    color:#616161;
+    font-size:16px;
+}
+
+#dnt_platforms tr:first-child td label, #dnt_profile_table tr:first-child td label, #printing_method tr:first-child td label{
+    color:#000000;
+    font-size:13px;
+}
+
+.label-left label{text-align: left !important;}
+.float-none {float: none !important;}
+.margin-top-40px{margin-top: -40px;}
+.customize_simple_form table tr:first-child td label{ text-align: left !important;}
+.field_with_errors label {padding: 2px;background-color: red;}
+.custom_margin label{margin: 2px 4px !important;}
+.custom_display_error{position: absolute; margin: 1% 8%;}
+.margin_0 label{margin: 0 !important;}
+.position-absolute{position: absolute;}
+.table-break tbody td{word-break: break-all;}
+.border_none{ border: none !important; }
+
+/*-----------------------CSS for direct marketing list source--------------*/
+.user_list_source_details{margin-top: -4%;}
+.list_source_details{background-color: #f5f5f5}
+.list_source_details th {padding: 5px;}
+#list_source table th {padding:6px;}
+#list_source table {background-color: #f5f5f5}
+#list_source table, #list_source_list table {table-layout: fixed;}
+#list_source table td, #list_source_list table td {padding:4px;}
+#save_list_source{width:100%;}
+#list_source th{font-weight: normal;}
+#remove_list_source{margin-left: 10px;}
+#list_source_list {background-color: #ffffff;margin-left: 7px;margin-right: 7px;}
+/*------------------------End of direct marketing list source--------------*/
+
+
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
+
+.icon-user {
+    background-position: -168px 0;
+}
+
+/*--------------------------CSS for Services Segment----------------------------*/
+.service_user_details{margin-top: -42px;}
+.background_clr{background-color: #f5f5f5}
+#services_field label{float: left;width: 15%;}
+#show_services{padding: 10px;}
+#services_field{padding: 2%;}
+#services_field [type="checkbox"]{margin-top: -5%;}
+/*--------------------------End of CSS for Services Segment----------------------*/
+
+
+/*-----------------------CSS For Global Update Date Segment------------------------------*/
+.user_global_update_details{margin-top: -3%;}
+.save_global_update{margin-top: -8px;}
+.background_gray{background-color: #f5f5f5;}
+#global_update_form .form-control[readonly] { cursor: pointer;background-color: #ffffff;}
+#update_date_fields, #global_update_fields, #global_update_list {padding: 10px;}
+#update_date_fields table, #global_update_fields table{width: 100%}
+#update_date_fields label, #global_update_fields label{float: left;margin-top: 6px;width: 25%;}
+#update_date_fields input,#global_update_fields input{width: 55% !important;}
+
+#form_update_dates .btn { background: white !important; }
+#update_verify_dm_facade_form .btn { background: white !important; }
+#form_dm_global_update_dates .btn { background: white !important; }
+#update_date_fields label.error {width: auto; margin-left: 25%;}
+/*-----------------------End of CSS For Global Update Date Segment----------------------*/
+
+
+.text_align_left label{
+    text-align: left !important;
+}
+.scrollable_table_x {overflow-x: auto}
+/*---------------------Start CSS For ReachProfile Metric Tab Segment---------------------------*/
+#form_dnt_reach label{width: 80px; text-align: left;}
+#platform_hh {width: 14%; margin-left: 1%;}
+#dnt_reach_user_details {margin-top: -42px;}
+.padding_top_2 {padding-top: 2%;}
+#reach_display_error td{padding-left: 25%;}
+.custom_label label.error {width: 100% !important; }
+#reach_video_error td{padding-left: 25%;}
+#reach_mobile_error td{padding-left: 25%;}
+#mobile_padding_top {padding-top: 3%;}
+/*---------------------End CSS For ReachProfile Metric Tab Segment---------------------------*/
+
+/*-------------------------------------Start of CSS For Master Data----------------------*/
+#email_type .error{margin-left: 28%;width: auto !important;}
+#email_field .error{margin-left: 14%;width: auto !important;}
+#email_field_form .error{width: auto !important;margin-left: 16%;}
+#email_options .error{margin-left: 28%;}
+#url_field_form .error{width: auto !important;margin-left: 16%;}
+#url_options .error{margin-left: 28%;}
+#phone_details label{width:9% !important;}
+#email_details label{width:21%}
+#phone_type .error, #phone_number .error{margin-top: 3%;width: auto !important; margin-left: -19%;}
+#country_code label.error{margin-top: 3%; margin-left: -9%;}
+#extension .error{float: right;margin-right: 5%;}
+#address_form, #people_form{padding: 1%;}
+#line1_address .error, #line2_address .error{margin-left: 11%;}
+#county_address .error, #zip_address .error, #state_address .error, #country_address .error, #city_address .error{margin-left: 28%;}
+#first_name .error, #middle_name .error, #last_name .error, #job_title .error{margin-top: 3%;margin-left: -19%; width: auto !important;}
+#address_tab_master_tab label {text-align: left;}
+#add_job_function{margin-top: 6px;}
+/*-----------------------End of CSS For Master Data--------------------------------------------*/
+
+
+/*------------------------Css Master Data Linking----------------------------------------------*/
+.address_user_details, .email_user_details, .url_user_details{margin-top: -3%;}
+.person_linking_save{margin-left: 16px;}
+#head_quarter_display .pagination, #material_shipping_address_display .pagination, #mailing_address_display .pagination{float: left }
+#address_x_person_td {border-top: transparent; padding-left: 4%;}
+.fixed_table {table-layout: fixed;}
+.word_wrap {word-wrap: break-word}
+.mrgn_top_8_neg {margin-top: -8%;}
+#add_person_linking{padding: 25px;}
+/*------------------------End of Css Master Data Linking----------------------------------------*/
+
+/* sets default color of buttons in the header as white. */
+.custom.btn.btn-default{ background: white !important;}
+.label-width-120  label {width: 125px !important;}
+
+/*---------------------------CSS for Network Background---------------------------------*/
+#form_network_background label {text-align: left; width: 166px !important;}
+#form_network_background .error{margin-left: 34% !important;}
+/*---------------------------End Of CSS for Network Background--------------------------*/
+
+
+/*---------------------------CSS for System Background---------------------------------*/
+#form_system_background label {width: 160px !important; text-align: left}
+#form_system_background .error{margin-left: 34% !important; width: auto !important;}
+/*---------------------------End Of CSS for System Background--------------------------*/
+
+/*-------------------------------------CSS for URL--------------------------------------*/
+#programing_url_user_details {margin-top: -46px;}
+#programing_url_field .error{margin-left: 18%; width: 30%;}
+.label-left label{text-align: left !important;}
+/*-------------------------------------End Of CSS for URL-------------------------------*/
+
+/*----------------------------------------CSS for DNT Platform ------------------------------*/
+#platform_accepted .radio{margin-bottom: 0 !important;margin-top: 0 !important;width: 20%;}
+#platform_accepted{margin-right: 22%;}
+#platform_accepted input[type="radio"]{margin-top: 3% !important;}
+.accepted_border{margin-left: 2%;border-bottom: 2px solid gray;width: 63%;}
+.platform_border{border-bottom: 2px solid gray;width: 60%;}
+.accepted_heading{margin-left: 35%;}
+/*----------------------------------------End of CSS for DNT Platform -------------------------*/
+
+
+/*---------------------------------CSS for TV Syndicator and Radio Syndicator Programming-----------------------*/
+#rd_syndicator_programming_inputs label.required:after, #tv_syndicator_program_inputs label.required:after{content:" *"; color: red;}
+#rd_syndicator_programming_inputs table th,#rd_syndicator_programming_inputs table td  {padding-left: 1%;}
+#tv_syndicator_program_inputs table th,#tv_syndicator_program_inputs table td  {padding-left: 1%;}
+#rd_syndicator_programming_inputs table #rd_syndicator_programming_field td{padding-left: 0;}
+#tv_syndicator_program_inputs table #tv_syndicator_program_field td{padding-left: 0;}
+#tv_syndicator_program_inputs .error{width: auto !important; margin-left: 1%;   }
+.gray_color {color: darkgray}
+/*---------------------------------End of CSS for Syndicator Programming---------------------------------------------*/
+
+/* CSS For Special Programming */
+#special_programming_field label.error {width: auto !important;}
+#special_programming_text_field {padding-left: 6%;}
+#error_special_programming_input label{margin-left: 0; width: auto !important; }
+/* CSS For Special Programming */
+
+/*-------------------------------------CSS for Other Selection--------------------------------------*/
+#form_dm_other_selection label.error {width: auto !important; margin-left: 2%;}
+/*-------------------------------------End CSS for Other Selection--------------------------------------*/

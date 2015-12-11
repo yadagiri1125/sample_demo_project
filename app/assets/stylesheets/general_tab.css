@@ -1,0 +1,95 @@
+
+/*-----------------Start profile specific style-------------*/
+.user_details{ margin-top: -3.75% !important; margin-right: 2%;}
+.profile_target_others_input label{margin-left: -1%;}
+.profile_target_other label{width: 4%!important;}
+.profile_customize  label {width: 147px; text-align: left;}
+.profile_services label{text-align: right; width: 6%!important;}
+
+.break_description {width: 99% !important; word-wrap: break-word; }
+.profile_services {width: 90%!important; float: right; margin-right: -3%;  }
+.profile_effidia_id label.error{margin-left: 32%;}
+#spidered_profile_count, #profile_desc_count, #datacard_desc_count {float:right; margin-right:2%;}
+#profile_specialities_input {margin-left: 24%;}
+#target_checkobox .checkbox input[type='checkbox']{margin-top: 4px; margin-left: 60%;}
+#profile_speciality_other_id{margin-left: 27%;}
+#site_profile table td label{width: 51%;}
+#site_profile input[type='radio']{ margin-top: 6%;}
+#site_profile{margin-left: 14%;}
+#site_profile label{text-align: left;}
+#site_profile table td:nth-child(4) label{margin-top: 3%;}
+#site_profile table td:nth-child(4) input{margin-top: 4%;}
+#multi_text_display{width: 50px; overflow: scroll;white-space: nowrap;}
+#speciality_error label.error{margin-left: 36%;}
+#target_error label.error{margin-left: -67% !important;margin-top: 4%;}
+label.error{width:60%!important; margin-left: 16%;}
+/*-----------------End profile specific style-------------*/
+
+/*-----------------------CSS For keywords and Notes Segment------------------------------*/
+.user_details_keyword_and_notes{margin-top: -3.75%;}
+.save_keyword_and_notes{margin-top: -10px;}
+.label-left label {text-align: left;}
+/*-----------------------End of CSS For CSS For keywords and Notes Segment---------------------*/
+
+/*------------------------------CSS For Title Segment---------------------------- */
+.newspaper_customize label, .magazine_customize label, .magazine_group_customize label, .tv_station_party_customize label,
+.dm_insert_customize label, .radio_customize label, .img_customize label, .dm_company_customize label{text-align: left !important; width: 32%;}
+.title_user_details{margin-top: -42px; cursor: not-allowed;}
+.fl_off_error{margin-left: 38%;padding: 0;}
+#title_common_fields label, #title_comment label, #title_name label{float: left; width: 12.5%;}
+#formerly_expire_on label, #to_be_published label{width:28%;}
+#formerly_expire_on .error{width:auto !important;margin-left: 32%;}
+#established_year .error, #frequency .error{width: auto !important; margin-left: 30%;}
+#english_translation .error, #incorporating_text .error{width: auto !important; margin-left: 14%;}
+#english_translation label, #incorporating_text label{width: 12.5% !important;}
+#tv_station_fields label{text-align: left !important;}
+#official_publications label, #air_year label{margin-left: 0}
+#official_publications .error{margin-left: 33% !important;}
+#compiler label{width: 24% !important;}
+#slogan label{width: 12%}
+#slogan .error{width: auto !important;margin-left: 15%;}
+#code_call label{width:25% !important;}
+#code_call .error{width: auto !important; margin-left: 28%;}
+#air_year .error{width: 40% !important;}
+#tv_station_fields .error{width: auto !important; margin-left: 28%;}
+#formerly .error{width: auto !important; margin-left: 35%;}
+#station_name .error{width: auto !important; margin-left: 18%;}
+#formerly, #frequency, #established_year, #foreign_languages{padding-left: 0}
+#formerly label, #air_year label{width:31% !important}
+#frequency label, #established_year label{width:25.5% !important; padding-left: 0}
+#published_month .error, #published_day .error{width:auto !important;margin-top: 6%;margin-left: -15%;}
+#published_year .error{width:22% !important;margin-top: 6%;margin-left: -19%;}
+#published_year label{width:0 !important;color: red;}
+/*------------------------------End Of CSS For Title Segment--------------------- */
+
+/*-----------------------Css for Tv Formerly and Radio Formerly Segment--------------------------*/
+#rd_formerly_month_error {padding-left: 9px}
+#tv_formerly_validation_errors label.error {width: auto !important; margin-left: 3%; padding-left: 0;}
+#rd_formerly_validation_errors label.error {width: auto !important; margin-left: -17%; padding-left: 0;}
+#rd_formerly_inputs table td,#tv_formerly_inputs table td, #tv_formerly_inputs table th  {padding-left: 1%;}
+#rd_formerly_inputs table #rd_formerly_field td, #tv_formerly_inputs table #tv_formerly_field td {padding-left: 0;}
+#rd_formerly_inputs label.required:after,#tv_formerly_inputs label.required:after{content:" *"; color: red;}
+/*-----------------------End Css for Tv Formerly and Radio Formerly Segment---------------------*/
+
+/*----------------------CSS for TV and Radio Facilities---------------------------------*/
+.tv_facility_operating_schedule_cdlk_id label{width:30% !important}
+#form_tv_facility label {text-align: left;}
+#form_rd_facility label {text-align: left; width: 135px !important;}
+.tv_facility_air_year .error {margin-left: 28%;}
+#search_tv_facility,#search_rd_facility {margin-left: 2%; background: gray !important; color: white;}
+.tv_facility_audio_watts label, .tv_facility_digital_watts label, .tv_facility_satellite_pgm_pct label {margin-left: 18%;}
+.tv_facility_video_watts .error, .tv_facility_antenna_height .error{margin-left: 32%;}
+.tv_facility_audio_watts .error, .tv_facility_satellite_pgm_pct .error, .tv_facility_digital_watts .error{margin-left: 48%;}
+#tv_facility_table td, #rd_facility_table td {border: none !important;}
+.rd_facility_power_watts .error,.rd_facility_operating_schedule .error {margin-left: 44%;}
+.rd_facility_antenna_height .error,.rd_facility_primary_audience_other .error, .rd_facility_secondary_audience_other .error {margin-left: 30%;}
+#date_rd_facility .error     {margin-left: -11%; margin-top: 7%; width: 12% !important;}
+#rd_facility_year .error {margin-left: -14%;width: 18% !important;}
+/*----------------------End of CSS for TV and Radio Facilities--------------------------*/
+
+
+/*--------------------------------CSS For Special Feature Segment-----------------------------------------------------*/
+.special_feature_customize label{width: 38% !important;}
+.sp_fet_error{margin-left: 43%; padding: 0 !important;}
+#inform_duration_mins .error, #billboard_duration_secs .error{margin-left:40% !important;width:auto !important; }
+/*--------------------------------End of CSS For Special Feature Segment----------------------------------------------*/

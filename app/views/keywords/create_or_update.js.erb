@@ -4,6 +4,6 @@
 <% else -%>
   $("#keyword_form").html("<%= j render 'keywords/form', sub_seg: @sub_seg %>");
   $("#keyword_errors").hide(300);
-  $("#keyword_flash_notice").html("<%#= j render 'shared/flash_mesg' %>").show(300).delay(1000).hide(300);
+  $("#keyword_flash_notice").html("<%= j render 'shared/flash_mesg' %>").show(300).delay(1000).hide(300);
 <% end -%>
 

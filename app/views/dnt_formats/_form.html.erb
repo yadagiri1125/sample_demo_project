@@ -1,0 +1,21 @@
+<% @dnt_format ||= DntFormat.new %>
+<%= simple_form_for(@dnt_format, remote: true, html: {class: 'customize_simple_form', id: 'form_dnt_formats'}) do |f| %>
+    <%= render 'keywords/user_detail_for_segment', obj: @dnt_format, f: f, segment: 'dnt_formats' %>
+    <%#= hidden_field_tag :segment_detail_id, sub_seg.id %>
+
+    <div id='dnt_formats_errors'></div>
+    <div id='dnt_formats_flash_notice' class='collapse' ></div>
+    <div class='clear_with_height'></div>
+
+    <%= render 'dnt_formats/display_accepted_format_fields', f: f, dnt_format: @dnt_format %>
+    <div class='clear_with_height'></div>
+    <%= render 'dnt_formats/video_accepted_format_fields', f: f, dnt_format: @dnt_format  %>
+
+<% end %>
+
+<script>
+    $('#reset_dnt_formats').click(function(){
+        $('#dnt_formats_form form')[0].reset();
+    });
+    // $('#form_dnt_formats :input[type=radio]').attr('disabled',<%#= current_party.published? %>);
+</script>

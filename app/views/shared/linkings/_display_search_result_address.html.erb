@@ -1,0 +1,23 @@
+<% unless address_objs.blank? %>
+    <% unless address_objs.each_hit_with_result.first.nil? %>
+        <%= render 'shared/linkings/address_header' %>
+        <% selected_objs_ids = selected_objs ? selected_objs.collect{|object| object.xref_id } : nil %>
+        <% address_objs.each_hit_with_result do |hit,address| %>
+            <tr id='tr_<%= address.id %>'>
+              <td>
+                <% selected = (selected_objs_ids ? selected_objs_ids.include?(address.id) : false) %>
+                <%= check_box_tag address.party.name, address.id, selected ,disabled: selected, title: (selected ? 'Already Added' : '') %>
+              </td>
+              <td colspan='2'>
+                <%= h address.party.name %>
+              </td>
+              <td colspan='2' class='word_wrap'><%= display_address(address) %></td>
+            </tr>
+        <% end %>
+    <% else %>
+        <%= render 'shared/linkings/address_header' %>
+        <tr>
+          <td colspan='4'>No records found</td>
+        </tr>
+    <% end %>
+<% end %>

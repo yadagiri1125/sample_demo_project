@@ -1,0 +1,8 @@
+#form_np_closing_times_special_days label {text-align: left}
+#form_np_closing_times_special_days label.error {width: auto !important;}
+#np_closing_times_special_features_table #section_feature_width {width: 60% !important;}
+#np_closing_times_special_features_table label {width: 0!important;}
+#form_np_closing_times_special_days input[type=checkbox],#form_np_closing_times_special_days a  {text-align: center; margin-left: 33%;}
+#np_closing_times_special_feature_validation_errors td {padding-left: 4%;}
+
+

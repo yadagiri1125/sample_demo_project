@@ -1,0 +1,23 @@
+<% unless email_objs.blank? %>
+    <% email_objs.each do |email_obj| %>
+        <tr id="<%= seg %>_<%= email_obj.id %>">
+          <td><%= h email_obj.xref.party.name %></td>
+          <td><%= email_obj.xref.email_type_cdlk.description %></td>
+          <td colspan="3" class='word_wrap'><%= email_obj.xref.email %></td>
+          <td colspan="1">
+            <%= link_to '', email_linking_path(email_obj, segment_detail_id: sub_seg), method: :delete,
+                        data: { confirm: 'Are you sure?' } , remote: true, class: 'glyphicon glyphicon-remove padding-15 mrgn_top_3' unless current_party.published? %>
+          </td>
+        </tr>
+    <% end %>
+<% else %>
+    <tr>
+      <td colspan='4'>No records found</td>
+    </tr>
+<% end %>
+
+
+
+
+
+

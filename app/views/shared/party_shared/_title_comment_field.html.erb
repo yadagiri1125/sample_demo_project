@@ -1,0 +1,10 @@
+<div class='form-group' id='title_comment'>
+  <%= label_tag 'Comments'%>
+  <%= text_field_tag :comments, current_party.comments, class: 'form-control col-xs-10' %>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#title_comment input').prop('disabled', true);
+    })
+</script>

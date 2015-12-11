@@ -1,0 +1,31 @@
+<div class="clear_with_height"></div>
+<%= render 'shared/phones/display_phones', master_object: master_object %>
+<div class="clear_with_height"></div>
+<div id="<%= master_object.class.name.downcase %>_tab_phone_error_explanation"></div>
+<% @phone ||= master_object.phones.new() %>
+<%= simple_form_for(@phone, remote: true, role: 'form', html: {class: 'customize_simple_form', id: "#{master_object.class.name.downcase}_tab_phone_master_tab"}) do |f| %>
+    <div class='form-group' id='phone_details'>
+          <span id='phone_type'><%= f.input :phone_type_cdlk_id , collection: select_options(PhoneTypeCdlk), selected: (@phone.present? ? @phone.phone_type_cdlk_id : ''),
+                                            label: 'Phone Type' , prompt: 'Please Select', input_html: { class: 'form-control col-xs-2'} %></span>
+          <span id='country_code'><%= f.input :country_code ,as: :string, label: 'Country Code', placeholder: '+1',
+                                              input_html: { class: 'form-control col-xs-1', value: (@phone.present? ? @phone.country_code : '')} %></span>
+          <span id='phone_number'><%= f.input :phone_number , as: :string, label: 'Phone', placeholder: '312-546-7894',
+                                              input_html: { class: 'form-control col-xs-2',value: (@phone.present? ? @phone.phone_number : ''),
+                                                            id: master_object.class.name.downcase+'_phone_number'} %></span>
+          <span id='extension'><%= f.input :extension , as: :string, label: 'Extension', placeholder: '123',
+                                           input_html: { class: 'form-control col-xs-1',value: (@phone.present? ? @phone.extension : ''),
+                                                         id: master_object.class.name.downcase+'_phone_extension'} %></span>
+      <%= f.input "#{master_object.class.name.downcase}_id", as: :hidden, input_html: {value: master_object.id} %>
+  </div>
+    <div class="clear_with_height_50"></div>
+  <div class="actions mrgn_lft_2">
+    <%= f.submit 'SAVE', class: 'btn btn-default', id: 'save_phone' %>
+  </div>
+<% end %>
+<script>
+    <% if master_object.present? && master_object.id.nil? %>
+        $('#<%= master_object.class.name.downcase %>_tab_phone_master_tab :input').prop('disabled', true);
+        $('#<%= master_object.class.name.downcase %>_tab_phone_master_tab :submit').attr('disabled', true);
+    <% end %>
+        $('#<%= master_object.class.name.downcase %>_tab_phone_master_tab').validate(<%= master_object.class.name.downcase %>_phone_validation_options);
+</script>

@@ -1,0 +1,33 @@
+<table class='table col-xs-12 pull-left'>
+  <thead>
+  <tr class='grey_color'>
+    <td width='35%'>Phone Type</td>
+    <td width='50%'>Phone</td>
+    <td width='15%'>Actions</td>
+  </tr>
+  </thead>
+  <tbody id='phone_display'>
+  <% unless master_object.phones.reload.blank? %>
+      <% master_object.phones.reload.each do |phone| %>
+          <tr>
+            <td><%= phone.phone_type_cdlk.description %></td>
+            <td>
+                <span data-toggle='tooltip' data-placement='bottom' title=<%="#{phone.country_code} #{phone.phone_number} #{phone.extension}" %>>
+                  <% unless phone.country_code.blank? %>
+                    <%= truncate("+#{phone.country_code} #{phone.phone_number} #{phone.extension}", length: 20) %>
+                  <% end %>
+                </span>
+            </td>
+            <td>
+              <%= link_to '', edit_phone_path(phone, "#{master_object.class.name.downcase}_id" => master_object.id), remote: true , class: 'glyphicon glyphicon-edit padding-right-20', title: 'Edit Phone', rel: 'tooltip' %>
+              <%= link_to '', phone_path(phone,"#{master_object.class.name.downcase}_id" => master_object.id), method: :delete, data: { confirm: 'Are you sure?'} , remote: true, class: 'glyphicon glyphicon-remove padding-right-20', title: 'Delete Phone', rel: 'tooltip' %>
+            </td>
+          </tr>
+      <% end %>
+  <% else %>
+      <tr>
+        <td colspan='5' class="text-center">No records found</td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

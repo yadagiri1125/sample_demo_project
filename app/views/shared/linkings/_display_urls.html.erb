@@ -1,0 +1,19 @@
+<% unless url_obj.blank? %>
+    <% url_obj.each do |url_object| %>
+        <tr id="url_object_<%= url_object.id %>">
+          <td>
+            <%= h url_object.xref.party.name %>
+          </td>
+          <td><%= url_object.xref.url_type_cdlk.description %></td>
+          <td colspan="3" class='word_wrap'><%= url_object.xref.url %></td>
+          <td>
+            <%= link_to '', url_linking_path(url_object.id, segment_detail_id: sub_seg), method: :delete,
+                        data: { confirm: 'Are you sure?' } , remote: true, class: 'glyphicon glyphicon-remove padding-15 mrgn_top_3' unless current_party.published? %>
+          </td>
+        </tr>
+    <% end %>
+<% else %>
+    <tr>
+      <td colspan='4'>No records found</td>
+    </tr>
+<% end %>

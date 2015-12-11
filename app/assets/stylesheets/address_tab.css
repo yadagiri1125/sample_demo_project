@@ -1,0 +1,12 @@
+#delivery_guarantee_pct label, #days_material_due_before_insertion label{width: 50% !important;}
+#delivery_guarantee_desc label{width: 16% !important;}
+#from_days label{width: 47% !important}
+#to_days label, #workdays label{width: 15% !important}
+#ncoa label{width: 37% !important}
+#delivery_24_hour label, #delivery_48_hour label{width: 37% !important}
+#delivery_other label{width: 15% !important}
+#from_days .error{margin-left: 52% !important}
+#to_days .error{width: 50% !important;margin-left: 20%;}
+#days_material_due_before_insertion .error{margin-left: 55% !important;}
+#cost_24_hour .error, #cost_48_hour .error{margin-left: 33% !important;}
+#delivery_guarantee_pct .error{margin-left: 55% !important;}

@@ -1,0 +1,26 @@
+.customize_simple_form_restriction label {
+    float: left;
+    width: 127px;
+    text-align: right;
+    margin: 2px 2px;
+}
+.customize_simple_form_restriction_no_width label {
+    float: left;
+    /*width: 100px;*/
+    text-align: right;
+    margin: 2px 10px;
+}
+
+.customize_simple_form_restriction div.input {margin-bottom: 10px;}
+
+.customize_simple_form_restriction .checkbox input[type="checkbox"]{ margin-top: 4px;}
+
+#form_dm_restriction .error{margin-left: -19% !important;margin-top: 4%;margin-right: -65%;}#dm_method_of_addressing_inputs label {text-align: left; width: 126px !important;}
+#dm_method_of_addressing_inputs .row label.error {width: 100% !important;margin-left: 0%;}
+#addressing_method-other_weight label   {text-align: right; margin-left: -12%;}
+.dm_method_of_addressing_other_weight label.error {margin-left: 26% !important;}
+.dm_method_of_addressing_other_weight label {margin-left: -9% !important;  margin-right: -2% !important;}
+.dm_method_of_addressing_max_other_desc label.error, .dm_method_of_addressing_min_other_desc .error {margin-left: 13%;}
+.custom_for_for_icon {font-size: 20px !important; margin-top: 6%;}
+.max_size{width: 132px !important;}
+.min_size{width: 122px !important;}

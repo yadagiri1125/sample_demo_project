@@ -1,0 +1,41 @@
+<table id="<%= display_id %>" class="<%=  specific_class %> fixed_table col-xs-12" >
+  <tbody>
+  <% unless multi_table.blank? %>
+      <% if (field_id == 'profile_specialities_input') %>
+          <% multi_table.reverse.each do |obj| %>
+              <%- if obj.code_lookup.present?  %>
+                  <tr id="<%= field_id %>_<%= obj.code_lookup_id %>">
+                    <td class="word_wrap col-xs-6"><%= obj.code_lookup.description %></td>
+                    <td id="<%= field_id %>_delete_<%= obj.code_lookup_id %>"><%= link_to '','#', class: 'glyphicon glyphicon-remove', title: 'Delete' unless current_party.published? %></td>
+                    <script>
+                        deleteRecord("<%= field_id %>","<%= obj.code_lookup_id %>","<%= container %>","<%= display_id %>","<%= obj.code_lookup_id %>");
+                    </script>
+                  </tr>
+              <% end %>
+          <% end %>
+      <% elsif(field_id == 'ooh_closing_time_row_header' || field_id == 'ooh_closing_time_column_header' || field_id == 'ooh_closing_time_row_header_list' || field_id == 'ooh_closing_time_column_header_list') %>
+          <% multi_table.reverse.each do |obj| %>
+              <%- if obj.send(field).present?  %>
+                  <tr id="<%= field_id %>_<%= obj.id %>">
+                    <td class="word_wrap col-xs-6"><%= obj.send(field) %></td>
+                    <td id="<%= field_id %>_delete_<%= obj.id %>"><%= link_to '','#', class: 'glyphicon glyphicon-remove', title: 'Delete' unless current_party.published? %></td>
+                    <script>
+                        deleteRecord("<%= field_id %>","<%= obj.send(field) %>","<%= container %>","<%= display_id %>","<%= obj.id %>");
+                    </script>
+                  </tr>
+              <% end %>
+          <% end %>
+      <% else %>
+          <% multi_table.reverse.each do |obj| %>
+              <tr id="<%= field_id %>_<%= obj.id %>">
+                <td class="col-xs-10" title="<%= obj.text %>"><%= truncate(obj.text, length: 20) %></td>
+                <td id="<%= field_id %>_delete_<%= obj.id %>"><%= link_to '','#', class: 'glyphicon glyphicon-remove', title: 'Delete' unless current_party.published? %></td>
+                <script>
+                    deleteRecord("<%= field_id %>","<%= obj.text %>","<%= container  %>","<%= display_id %>","<%= obj.id %>");
+                 </script>
+              </tr>
+          <% end %>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>

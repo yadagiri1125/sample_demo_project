@@ -1,0 +1,8 @@
+<% if @dnt_format.errors.any? -%>
+  $('#dnt_formats_errors').html("<%= j render 'shared/errors/errors', object:  @dnt_format %>").show();
+  $('#dnt_formats_flash_notice').hide();
+<% else -%>
+  $('#dnt_formats_form').html("<%= j render 'dnt_formats/form' , sub_seg: @sub_seg %>");
+  $('#dnt_formats_flash_notice').html("<%= j render 'shared/flash_mesg' %>").show(300).delay(1000).hide(300);
+  $('#dnt_formats_errors ').hide();
+<% end -%>

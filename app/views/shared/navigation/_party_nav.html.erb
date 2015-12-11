@@ -1,0 +1,38 @@
+<style>
+
+.btn-links a:link    {color:white; background-color: blue;}
+.btn-links a:visited {color:white; background-color: blue;}
+.btn-links a:hover   {color:white; background-color: blue;}
+.btn-links a:active  {color:yellow;  background-color: blue;}
+
+</style>
+
+    <div class="col-md-1"></div>
+    <div class="col-md-6 btn-links">
+      <% unless current_party.nil? %>
+       
+        <%= link_to 'Segments', party_path(current_party), 
+          :class => "btn btn-default btn-sm #{current_page?(party_path(current_party)) ? 'disabled': '' }" %>     
+        
+        <%= link_to 'Listings', listings_path, 
+          :class => "btn btn-default btn-sm #{controller_name.eql?('listings') ? 'disabled': '' }" %>
+        
+
+        <%= link_to 'Services', listing_services_path, 
+          :class => "btn btn-default btn-sm #{active?(images_path, 
+                                                      listing_services_path,
+                                                      paid_assets_path,
+                                                      party_services_path,
+                                                      structure_services_path) ? 'disabled': '' }" %>        
+        
+        <%= link_to 'Edit Party', edit_party_path(current_party), 
+          :class => "btn btn-default btn-sm #{current_page?(edit_party_path(current_party)) ? 'disabled': '' }" %>
+
+        <% if current_user.role? :admin %>
+          <%= link_to 'Affiliations', affiliations_path, 
+            :class => "btn btn-default btn-sm #{current_page?(affiliations_path) ? 'disabled': '' }" %>
+        <% end %>
+        
+      <% end %>
+    </div>
+

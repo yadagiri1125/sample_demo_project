@@ -1,0 +1,26 @@
+<style>
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: #999999;
+    color:white; 
+}
+
+</style>
+
+<div class="tabbable" style="margin-top:40px;">
+
+  <ul class="nav nav-tabs">
+    <li class="<%= active?(listing_services_path) ? 'active': '' %>"><%= link_to "Listing Services", listing_services_path %></li> 
+    <li class="<%= active?(images_path) ? 'active': '' %>"><%= link_to "Images", images_path %></li> 
+    <li class="<%= active?(paid_assets_path) ? 'active': '' %>"><%= link_to "Paid Assets", paid_assets_path %></li>    
+    <li class="<%= active?(party_services_path) ? 'active': '' %>"><%= link_to "Party Services", party_services_path %></li>  
+    <li class="<%= active?(structure_services_path, manage_listings_path) ? 'active': '' %>"><%= link_to "Structure Services", structure_services_path %></li>   
+    <li><a href="#">Billing</a></li>
+  </ul>
+  
+  <div class="tab-content" style="border-top:5px solid #999;">
+
+  </div><!-- /.tab-content -->
+</div><!-- /.tabbable -->

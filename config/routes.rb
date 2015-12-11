@@ -11,6 +11,7 @@ SampleApp1::Application.routes.draw do
   resources :locations
 
   resources :users
+  resources :posts
 
   get "categories/new"
   get "categories/edit"
@@ -28,6 +29,7 @@ SampleApp1::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root "locations#index"
   resources :keywords
+  resources :dm_dnets,:dnt_formats,:dnt_platforms
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

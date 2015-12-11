@@ -1,0 +1,16 @@
+<% unless address_objs.blank? %>
+    <% address_objs.each do |address| %>
+        <tr id="<%= seg %>_<%= address.id %>">
+          <td colspan="2"><%= h address.xref.party.name %></td>
+          <td colspan="3" class='word_wrap'><%= display_address(address.xref) %></td>
+          <td colspan="2">
+            <%= link_to '', address_linking_path(address.id, segment_detail_id: sub_seg), method: :delete,
+                        data: { confirm: 'Are you sure?' } , remote: true, class: 'glyphicon glyphicon-remove padding-15' unless current_party.published? %>
+          </td>
+        </tr>
+    <% end %>
+<% else %>
+    <tr>
+      <td colspan='4'>No records found</td>
+    </tr>
+<% end %>

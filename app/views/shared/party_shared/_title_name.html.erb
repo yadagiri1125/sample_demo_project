@@ -1,0 +1,13 @@
+<div class='form-group' id='title_name'>
+  <div class='form-group'>
+    <%= label_tag 'Title'%>
+    <%= text_field_tag :name, current_party.name, class: 'form-control col-xs-10' %>
+  </div>
+</div>
+<div class='clear'></div>
+
+<script>
+    $(document).ready(function(){
+        $('#title_name input').prop('disabled', true);
+    })
+</script>

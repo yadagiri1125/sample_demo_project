@@ -1,0 +1,31 @@
+<div class='col-md-4' id='from_days'>
+  <%= f.input :from_days, label: 'From Days', input_html: {class: 'form-control col-xs-3'} %>
+</div>
+<div class='col-md-4' id='to_days'>
+  <%= f.input :to_days, label: 'To Days', input_html: {class: 'form-control col-xs-3'} %>
+</div>
+<div class='col-md-4' id='workdays'>
+  <%= f.input :workdays, as: :boolean, label: 'Workdays' %>
+</div>
+<div class='clear_with_height'></div>
+
+<div class='col-md-12' id='delivery_other'>
+  <%= f.input :delivery_other, as: :text, label: 'Delivery Other',
+              input_html: {class: 'form-control col-xs-10 text_area_resizing', rows:3} %>
+</div>
+
+<div class='clear_with_height'></div>
+<div class='col-md-5' id='delivery_24_hour'>
+  <%= f.input :delivery_24_hour, as: :boolean, label: '24 hr Delivery' %>
+</div>
+<div class='col-md-4' id='cost_24_hour'>
+  <%= f.input :cost_24_hour, label: '24 hr Cost', input_html: {class: 'form-control col-xs-4'} %>
+</div>
+
+<div class='clear_with_height'></div>
+<div class='col-md-5' id='delivery_48_hour'>
+  <%= f.input :delivery_48_hour, as: :boolean, label: '48 hr Delivery' %>
+</div>
+<div class='col-md-4' id='cost_48_hour'>
+  <%= f.input :cost_48_hour, label: '48 hr Cost', input_html: {class: 'form-control col-xs-4'} %>
+</div>
