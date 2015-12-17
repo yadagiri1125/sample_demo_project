@@ -64,7 +64,9 @@ select.date-select {
   border-bottom:none;
 
 }
-
+.sample_class {
+  background-color: #ffffff;
+}
 
 /* navbar styles */
 /*.active {

@@ -1454,4 +1454,60 @@ rake db:setup  = > create migrate seed  ==> rake db:create;rake db:migrate;rake 
 
 bin/rake db:migrate RAILS_ENV=test
 
+17/12/2015::
+Callbacks:: is block of code which used execute during the changing of life cycle of a object.
+
+1. they will present in models
+2. they are simple instance methods
+
+Creating an Object
+
+a.before
+b.after
+c.around
+
+1.validation
+2.save
+3.create
+4.rollback
+
+    before_validation
+    after_validation
+    before_save
+    around_save
+    before_create
+    around_create
+    after_create
+    after_save
+    after_commit/after_rollback
+
+Updating an Object
+
+    before_validation
+    after_validation
+    before_save
+    around_save
+    before_update
+    around_update
+    after_update
+    after_save
+    after_commit/after_rollback
+
+Destroying an Object
+
+    before_destroy
+    around_destroy
+    after_destroy
+    after_commit/after_rollback
+
+
+Object life cycle::
+
+1.initialize
+2.validate
+3.save
+4.create
+5.commit/rollback
+
+
 

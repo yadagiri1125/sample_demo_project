@@ -1,0 +1,29 @@
+<h1>Listing holds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @holds.each do |hold| %>
+      <tr>
+        <td><%= hold.name %></td>
+        <td><%= hold.date %></td>
+        <td><%= link_to 'Show', hold %></td>
+        <td><%= link_to 'Edit', edit_hold_path(hold) %></td>
+        <td><%= link_to 'Destroy', hold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hold', new_hold_path %>

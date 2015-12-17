@@ -1,4 +1,6 @@
 SampleApp1::Application.routes.draw do
+  resources :holds
+
   get "countries/index"
   get "countries/show"
   get "countries/edit"
@@ -23,6 +25,7 @@ SampleApp1::Application.routes.draw do
   get "products/index"
   get "user/show"
   get "user/index"
+  resources :orders
   resources :micro_posts,:posts
   # See how all your routes lay out with "rake routes".
 

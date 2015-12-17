@@ -2,6 +2,10 @@ class DntPlatformsController < ApplicationController
   # include SegmentSupport
   # before_action :require_login,:reload_on_published
 
+  def index
+
+  end
+  
   def create
     @dnt_platform = DntPlatform.new(dnt_platform_params)
     # @dnt_platform.segment_detail_id = current_sub_seg.id

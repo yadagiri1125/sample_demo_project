@@ -8,6 +8,7 @@
             <tr>
                 <td>Name </td>
                 <td>Id </td>
+                <td>Description</td>
               <td></td>
               <td></td>
               <td></td>
@@ -21,6 +22,9 @@
                   </td>
                   <td>
                     <%= post.id %>
+                  </td>
+                  <td>
+                    <%= post.description %>
                   </td>
                 <td><%= link_to 'Show', post %></td>
                 <td><%= link_to 'Edit', edit_post_path(post) %></td>

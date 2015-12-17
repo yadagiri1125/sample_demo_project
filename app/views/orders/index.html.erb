@@ -1,0 +1,13 @@
+<table>
+  <tr>
+     <td>Id</td>
+     <td>Order Name</td>
+     <td>Customer Name</td>
+  </tr>
+  <% @orders.each do |order| %>
+     <tr>
+     <td><%= order.id %></td>
+     <td><%= order.name %></td>
+     <td><%= order.customer.name %></td>
+  </tr>
+  <% end %>
