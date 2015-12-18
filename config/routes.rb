@@ -12,7 +12,15 @@ SampleApp1::Application.routes.draw do
   get "home/sample"
   resources :locations
 
-  resources :users
+  resources :users do 
+    member do
+     get 'preview'
+    end
+
+    collection do
+      get 'search'
+    end
+  end
   resources :posts
 
   get "categories/new"
@@ -27,6 +35,19 @@ SampleApp1::Application.routes.draw do
   get "user/index"
   resources :orders
   resources :micro_posts,:posts
+
+  get '/patients/:id', to: 'patients#show'
+  get '/satish', to: 'patients#index'
+  get 'profile', to: 'users#index'
+
+  namespace :admin do
+   resources :articles, :comments
+  end
+
+  resources :customers do
+    resources :orders
+  end
+
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

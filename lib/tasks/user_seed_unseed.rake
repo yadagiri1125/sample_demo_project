@@ -3,7 +3,7 @@ namespace :user do
     
     task :seed => :environment do
          for i in 0..100
-             @user = User.create(name:"name#{i}")
+             @user = User.create(name:"name#{i}",description:"sadasd#{i*10}")
              puts @user.name
           end
      end

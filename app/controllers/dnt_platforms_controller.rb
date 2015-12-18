@@ -3,14 +3,14 @@ class DntPlatformsController < ApplicationController
   # before_action :require_login,:reload_on_published
 
   def index
-
+   
   end
-  
+
   def create
     @dnt_platform = DntPlatform.new(dnt_platform_params)
     # @dnt_platform.segment_detail_id = current_sub_seg.id
     flash[:notice] = 'Platform was successfully reset.'
-    unless params[:commit] == 'RESET'
+    unless params[:commit] == 'RESET' 
       if @dnt_platform.save
         # @dnt_platform.assign_user(current_user)
         flash[:notice] = 'Platform was successfully created.'

@@ -1509,5 +1509,11 @@ Object life cycle::
 4.create
 5.commit/rollback
 
+Routes::
+
+1. routes.rb will present in config directory
+2.it will parses url and maps it to corresponding controller and action
+3. https verbs used by routes is get,post,put,patch,delete
+4.need to restart server once routes.rb file is modified.
 
 
