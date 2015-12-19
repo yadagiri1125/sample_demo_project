@@ -1,0 +1,2 @@
+class Calculation < MultirowText
+end

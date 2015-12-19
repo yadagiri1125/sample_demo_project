@@ -22,6 +22,7 @@ SampleApp1::Application.routes.draw do
     end
   end
   resources :posts
+  resources :multirow_texts,:cities,:calculations,:sponsors
 
   get "categories/new"
   get "categories/edit"

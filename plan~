@@ -1,3 +1,12 @@
+1. microposts and comments sample pp in rails guide
+  a.migration for creating articles
+  b.migration for comments
+  a.model views controller for both articles and comments to implement crud actions
+  c. map associations
+  d.routing
+  e.insert sample data
+  f.Ui 
+  
 ##defining a method
 
 1. method used to defined with a keyword called def
@@ -1515,5 +1524,24 @@ Routes::
 2.it will parses url and maps it to corresponding controller and action
 3. https verbs used by routes is get,post,put,patch,delete
 4.need to restart server once routes.rb file is modified.
+
+
+params::
+
+
+
+STI::
+
+1.sponsors(name:string)
+2.notes(name:string)
+3.calculations(name:string)
+
+1. one model called multirow_texts(name:string) will inherit from ActiveRecorb::Base
+
+2. 3 models calls sponsors,notes and calculations will inherit from multirow texts instead of inheriting from ActiveRecord::Base
+
+
+
+
 
 
