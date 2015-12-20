@@ -1541,6 +1541,53 @@ STI::
 2. 3 models calls sponsors,notes and calculations will inherit from multirow texts instead of inheriting from ActiveRecord::Base
 
 
+GIT::
+
+1.distributed version control system
+2. multiple developers can work on same projet using git
+3.different stages of files
+  a.untracked files
+  b.staged files
+  c. un committed files
+4. git sha is unique among the commits
+
+
+
+
+
+control structures
+
+1.decision makings
+  a. if , if else, elsif,case
+  http://www.tutorialspoint.com/ruby/ruby_if_else.htm
+2.loops
+  while , do while,for, each , each_with_index,until
+  http://www.tutorialspoint.com/ruby/ruby_loops.htm
+
+
+ a.initialisation
+ b.incrementation
+ c.condition
+
+3. collections:
+
+arrays::
+  http://www.tutorialspoint.com/ruby/ruby_arrays.htm
+http://ruby-doc.org/core-2.2.0/Array.html
+hashes
+strings
+
+
+1.wrtite a program  
+
+ a. print first 100 elements 0 to 100
+ b.even number between 0 to 100
+ c.factorial of a given number
+ c. odd numbers between 0 to 100
+ d. reverse a string
+ e. reverse a array
+
+
 
 
 
