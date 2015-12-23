@@ -1,0 +1,45 @@
+<h1>Listing users</h1>
+<% unless @users.nil? %>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+<% end %>
+<br />
+
+<%= link_to 'New User', new_user_path %>
+<% unless @users_invite.nil? %>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+
+      <% @users_invite.each do |user_invite| %>
+          <tr>
+            <td><%= user_invite.name %></td>
+            <td><%= user_invite.email %></td>
+          </tr>
+      <% end %>
+    </table>
+<% end %>
+
+<%= form_tag (send_invitation_users_path) do %>
+    <%= submit_tag "Invite"%>
+<% end %>

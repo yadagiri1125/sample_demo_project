@@ -1,0 +1,15 @@
+- @banks.each_with_index do |bank, index|
+  %tr
+    %td<
+      = index + 1
+    %td< 
+      = bank.bank_name
+    %td<
+      = bank.email
+    %td<
+      = bank.phone_number
+    %td<
+      / = link_to(edit_bank_path(bank), class: 'green', title: 'Edit') do
+      /   %i.fa.fa-fw.fa-pencil
+      / = link_to(bank_path(bank), method: :delete, data: { confirm: 'Are you sure?' }, class: 'green', title: 'Delete') do
+      /   %i.fa.fa-fw.fa-bitbucket

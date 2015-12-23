@@ -1587,6 +1587,14 @@ strings
  d. reverse a string
  e. reverse a array
 
+haml to html converter
+
+https://haml2erb.org/
+ 
+Strings ::
+http://ruby-doc.org/core-2.2.0/String.html
+
+
 
 
 

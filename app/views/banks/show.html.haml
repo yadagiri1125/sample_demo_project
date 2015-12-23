@@ -1,0 +1,27 @@
+.content-wrapper
+  %section.content-header
+    %h1 Bank Detail
+  .section.content
+    .row
+      .col-md-6
+        .box.box-primary
+          .box-body
+            Bank Name:
+            = @bank.bank_name
+            .spacer5
+            Email:
+            = @bank.email
+            .spacer5
+            Contact:
+            = @bank.phone_number
+            .spacer5
+            Address:
+            = @bank.address.street
+            .spacer5
+            = @bank.address.city.titleize
+            = @bank.address.state.code
+            .spacer5
+            = @bank.address.country.name
+    - if can? :manage, Bank
+      .row
+        = link_to 'Edit', edit_bank_path(@bank), class: 'btn bg-red margin'

@@ -1,4 +1,5 @@
 SampleApp1::Application.routes.draw do
+  devise_for :users
   resources :holds
 
   get "countries/index"
@@ -11,7 +12,7 @@ SampleApp1::Application.routes.draw do
   get "home/sample1"
   get "home/sample"
   resources :locations
-
+  resources :banks
   resources :users do 
     member do
      get 'preview'
@@ -34,6 +35,12 @@ SampleApp1::Application.routes.draw do
   get "products/index"
   get "user/show"
   get "user/index"
+  
+  resources :employees do
+   collection do
+    get 'search'
+   end
+  end
   resources :orders
   resources :micro_posts,:posts
 

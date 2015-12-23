@@ -1,0 +1,15 @@
+- @company_inspectors.each_with_index do |company_inspector, index|
+  %tr
+    %td<
+      = index + 1
+    %td<
+      = company_inspector.user_profile.name.titleize
+    %td<
+      = company_inspector.email
+    %td.text-center<
+      = company_inspector.user_profile.department.titleize
+    / %td.text-center<
+    /   = link_to("#", class: 'green', title: 'Disable') do
+    /     %i.fa.fa-fw.fa-pause
+    /   = link_to("#", class: 'green', title: 'Edit') do
+    /     %i.fa.fa-fw.fa-pencil

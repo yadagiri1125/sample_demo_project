@@ -1,0 +1,53 @@
+= form_for @ci_company do |f|
+  .col-md-6
+    .box.box-primary
+      .box-header
+        %h3.box-title
+        .box-body
+          - if @ci_company.errors[:ci_company_name].present?
+            .form-group.has-error
+              = f.label :Name
+              = f.text_field :ci_company_name, placeholder: "#{@ci_company.errors.messages[:ci_company_name].join(",")}", :class => 'form-control'
+          - else
+            .form-group
+              = f.label :Name
+              = f.text_field :ci_company_name, placeholder: 'Enter Name', :class => 'form-control'
+          .form-group
+            = f.label :Phone_Number
+            = f.text_field :phone_number, placeholder: 'Enter Phone', :class => 'form-control'
+          - if @ci_company.errors[:ci_company_email].present?
+            .form-group.has-error
+              = f.label :Email
+              = f.text_field :ci_company_email, placeholder: "#{@ci_company.errors.messages[:ci_company_email].join(",")}", :class => 'form-control'
+          - else
+            .form-group
+              = f.label :Email
+              = f.text_field :ci_company_email, placeholder: 'Enter email', :class => 'form-control'
+          .form-group
+            = f.label :URL
+            = f.text_field :url, placeholder: 'Enter URL', :class => 'form-control'
+  .col-md-6
+    .box.box-warning
+      .box-header
+        %h3.box-title Address
+        .box-body
+          = f.fields_for :address do |addresses_form|
+            .form-group
+              #{addresses_form.label :Country}
+            .form-group
+              #{addresses_form.collection_select :country_id, Country.all, :id, :name, {include_blank: false}, {class: 'form-control'}}
+            .form-group
+              #{addresses_form.label :State}
+            .form-group
+              #{addresses_form.collection_select :state_id, State.all, :id, :name, {include_blank: 'Select State'}, {class: 'form-control'}}
+            .form-group
+              #{addresses_form.label :Street}
+            .form-group
+              #{addresses_form.text_field :street, :class => 'form-control', placeholder: 'Enter Street'}
+            .form-group
+              #{addresses_form.label :City}
+            .form-group
+              #{addresses_form.text_field :city, :class => 'form-control', placeholder: 'Enter City'}
+    .box-warning{:style => 'position: relative;right: 513px;'}
+      .box-footer
+        %button.btn.btn-primary{:type => 'submit'} Submit

@@ -1,0 +1,19 @@
+- registration_full_path = "#{Settings.defaults.portal_url}#{user_registration_registrations_path(token: @token)}"
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h4
+      Hi,
+    %p
+      Please find below detail for registration.
+    %p 
+      Message:
+      = @message
+    %p 
+      Please click
+      #{link_to('Here', registration_full_path)}
+      for registration
+    %p 
+      Thanks

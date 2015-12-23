@@ -1,0 +1,44 @@
+#myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  = form_tag(send_banking_user_invitation_user_invitations_path, method: :post, remote: true) do
+    - invited_as = @ci.present? ? 'is_invited_as_ci_admin' : 'is_invited_as_banking_admin'
+    - if @ci.present?
+      = hidden_field_tag 'ci_user', @ci
+    .modal-dialog{:role => "document"}
+      .modal-content
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+          %h4#myModalLabel.modal-title Send Invitation
+        .modal-body
+          .box.box-primary
+            %form{:role => "form"}
+              .box-body
+                .form-group
+                  %label Email address
+                  %span.span-require-field *
+                  = text_field_tag "user_invitation[email]", nil, placeholder: "Enter email", class: "form-control"
+                - if @ci.present? && @ci_companies.present?
+                  .form-group
+                    %label CI Companies
+                    %span
+                    = select_tag "user_invitation[ci_company_id]", options_from_collection_for_select(@ci_companies, "id", "ci_company_name"), prompt: "--- Please Select ---", class: "form-control"
+                - if !@ci.present? && @banks.present? && current_user.is_system_admin?
+                  .form-group
+                    %label Banks
+                    %span
+                    = select_tag "user_invitation[bank_id]", options_from_collection_for_select(Bank.all, "id", "bank_name"), prompt: "--- Please Select ---", class: "form-control"
+                - if !@ci.present? && current_user.is_bank_admin? && current_user.employee.present?
+                  .form-group
+                    %label Bank:
+                    %span
+                    = hidden_field_tag "user_invitation[bank_id]", current_user.employee.employable.id
+                    = current_user.employee.employable.bank_name
+                .form-group
+                  %label Message
+                  = text_area_tag 'user_invitation[message]', nil, placeholder: 'Message', rows: 3, class: 'form-control'
+              .checkbox
+                %label
+                  = check_box_tag "user_invitation[#{invited_as}]"
+                  Do you want to make him Admin?
+        .modal-footer
+          = submit_tag 'Send', data: { disable_with: 'Sending...' }, class: 'btn btn-primary btn-success pull-left'

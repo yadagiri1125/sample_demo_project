@@ -1,0 +1,34 @@
+%body.register-page
+  .register-box
+    .register-logo
+      %a{:href => "#"}
+        %b> Inspect
+        DATE
+    .register-box-body
+      %p.login-box-msg Register a new membership
+      = form_tag(registrations_path, method: :post) do |f|
+        = hidden_field_tag 'token', params[:token]
+        .form-group.has-feedback
+          = text_field_tag 'user_profile[name]', nil, autofocus: true, class: 'form-control', placeholder: 'Name'
+          %span.glyphicon.glyphicon-user.form-control-feedback
+        .form-group.has-feedback
+          = text_field_tag 'user_profile[contact]', nil, class: 'form-control', placeholder: 'Contact'
+          %span.glyphicon.glyphicon-earphone.form-control-feedback
+        .form-group.has-feedback
+          = text_field_tag 'user_profile[designation]', nil, class: 'form-control', placeholder: 'Designation'
+          %span.glyphicon.glyphicon-envelope.form-control-feedback
+        .form-group.has-feedback
+          = text_field_tag 'user_profile[department]', nil, class: 'form-control', placeholder: 'Department'
+          %span.glyphicon.glyphicon-envelope.form-control-feedback
+        .form-group.has-feedback
+          = text_field_tag 'user[email]', params[:email], class: 'form-control', placeholder: 'email', readonly: true
+          %span.glyphicon.glyphicon-envelope.form-control-feedback
+        .form-group.has-feedback
+          = password_field_tag 'user[password]', nil, class: 'form-control', placeholder: 'Password'
+          %span.glyphicon.glyphicon-lock.form-control-feedback
+        .form-group.has-feedback
+          = password_field_tag 'confirm_password', nil, class: 'form-control', placeholder: 'Retry Password'
+          %span.glyphicon.glyphicon-log-in.form-control-feedback
+        .row
+          .col-xs-4
+            = submit_tag "Register", class: 'btn btn-primary btn-block btn-flat pull-right'

@@ -1,0 +1,15 @@
+- @banking_professionals.each_with_index do |banking_professional, index|
+  %tr
+    %td<
+      = index + 1
+    %td<
+      = banking_professional.user.user_profile.name.titleize
+    %td<
+      = banking_professional.user.email
+    %td.text-center<
+      = banking_professional.user.user_profile.department.titleize
+    / %td.text-center<
+    /   = link_to("#", class: 'green', title: 'Disable') do
+    /     %i.fa.fa-fw.fa-pause
+    /   = link_to("#", class: 'green', title: 'Edit') do
+    /     %i.fa.fa-fw.fa-pencil

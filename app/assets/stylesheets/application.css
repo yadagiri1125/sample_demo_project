@@ -23,6 +23,13 @@
  *= require affliations_tab
  */
 
+ .clear_with_height{ clear:both; height: 10px; }
+ 
+ .lft_mrgn_3{
+  margin-left:13%;
+ }
+
+
 body {
 
   padding-top: 100px;

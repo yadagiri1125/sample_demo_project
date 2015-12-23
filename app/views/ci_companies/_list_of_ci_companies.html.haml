@@ -1,0 +1,15 @@
+- @ci_companies.each_with_index do |ci_company, index|
+  %tr
+    %td<
+      = index + 1
+    %td<
+      = ci_company.ci_company_name
+    %td<
+      = ci_company.ci_company_email
+    %td<
+      = ci_company.phone_number
+    %td<
+      / = link_to(edit_ci_company_path(ci_company), class: 'green', title: 'Edit') do
+      /   %i.fa.fa-fw.fa-pencil
+      / = link_to(ci_company_path(ci_company), method: :delete, data: { confirm: 'Are you sure?' }, class: 'green', title: 'Delete') do
+      /   %i.fa.fa-fw.fa-bitbucket

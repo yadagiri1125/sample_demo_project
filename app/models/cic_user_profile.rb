@@ -1,0 +1,2 @@
+class CicUserProfile < UserProfile
+end

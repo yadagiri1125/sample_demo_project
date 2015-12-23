@@ -1,0 +1,30 @@
+.content-wrapper
+  %section.content-header
+    %h1
+      CI Companies
+  %section.content
+    = render 'layouts/flash_notice'
+    .row
+      - if can? :manage, CiCompany
+        = link_to 'New Ci Company', new_ci_company_path, class: 'btn bg-red margin'
+      .spacer5
+      .col-xs-12
+        .box
+          .box-body
+            %table#example1.table.table-bordered.table-striped
+              - if @ci_companies.present?
+                %thead
+                  %tr
+                    %th Sr.No.
+                    %th Name
+                    %th Email
+                    %th Contact
+                    / %th Actions
+                %tbody
+                  = render partial: 'list_of_ci_companies'
+              - else
+                No CI Company Found
+      .col-xs-6
+        .dataTables_paginate.paging_bootstrap
+          %ul.pagination
+            = paginate @ci_companies

@@ -1,0 +1,7 @@
+- flash.each do |name, msg|
+  .box-body{:style => 'position: relative;left: -13px;'}
+    .alert.alert-success.alert-dismissable
+      %h4
+        %i.icon.fa.fa-check
+        = msg
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×

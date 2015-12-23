@@ -1,0 +1,2 @@
+class BankingUserProfile < UserProfile
+end
