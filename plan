@@ -1,160 +1,4 @@
-1. microposts and comments sample pp in rails guide
-  a.migration for creating articles
-  b.migration for comments
-  a.model views controller for both articles and comments to implement crud actions
-  c. map associations
-  d.routing
-  e.insert sample data
-  f.Ui 
-  
-##defining a method
 
-1. method used to defined with a keyword called def
-2. method definition ends with a keyword called end
-3. if it is multi word all words shoud be seperated with _
-4.they shouldnot start with numbers , they can start with _ or alphabets
-ex::
-def sample
-  a="hellooo"
-  b="world"
-  puts a+" "+b  
-end
-
-def my_method11231
-end
-def current123_user
-end
-def load_user
-end
-
-def _current_use
-end
-
-3. claiing a method
-  ex:: sample
-
-## methods with arguments
-1.definition
-  def sample a,b
-    puts a+b 
-  end
-2.calling a method
-ex::
-
-   sample "hellloo","world"
-   sample 1,2
-
-## method with return type
-1. definition
-  
-def sample a,b
-    return a+b 
-end
-  
-2. calling a method
-result = sample 4,5
-
-puts result
-
- 
-## method with return type without arguments
-
-   def sample
-     a=10
-     b=20 
-     return a+b 
-   end
-   result = sample
-   puts result
-
-## define a class
-1.first letter of a class should be capital letter
-2.if it is multi owrd it should be in a camalcase form
-
-class Post 
-  def sample
-    puts "this is sample method"
-  end 
-  def sample1
-    puts "this is sample1 method"
-  end 
-  def sample2
-    puts "this is sample2 method"
-  end 
-  def sample_3
-    puts "this is pradeep method"
-  end                                                                           
-end
-
-
-class Calculation 
-  def add
-    a=10
-    b=20
-    puts a+b
-  end 
-  def difference
-    a=10
-    b=20
-    puts a-b
-  end 
-  def multiply
-    a=10
-    b=20
-    puts a*b
-  end 
-  def division
-    a=10
-    b=20
-    puts a/b
-  end  
-  def all
-    add
-    difference
-    multiply
-    division
-  end                                                                         
-end
-
-
-class MicroPost
-end
-class CurrentUser
-end
-
-
-2. creating a object for class
-syntax:  variable = Classname.new
-  @post = Post.new
-
-creating a rails project::
-
-rails 2.x.x  2.0.0 2.3.5  2.3.7   ruby 1.8.x  1.8.6 1.8.7
-rails 3.x.x  3.0.0 3.2.3  3.2.1   ruby 1.9.x  1.9.2 1.9.1 1.9.3 minimum 1.8.7  
-rails 4.x.x  4.0.0 4.1.0  4.2.2   ruby 2.0.0n 2.2.2  minimum 1.9.3
-databases::  mysql  postgress/postgresql sqlite3(default)
-
-rvm use 2.0.0
-rvm gemset create sample_project
-rvm gemset use sample_project
-gem install rails -v 4.0.2
-rails new sample_5_dec -d mysql 
-subl .  -- to open project in sublime
-edit config/database.yml  place your root user password
-rake db:create
-rails s
-localhost:3000
-Gem::LoadError: Specified 'mysql2' for database adapter, but the gem is not loaded. Add `gem 'mysql2'` to your Gemfile
-
-gem 'mysql2', '~> 0.3.18'
-
-1. 8 controller models migrations  views routes and teir mapping
-2.rake task
-3. push code base to git
-4.deploy dms inspect date,mverso,venuedog
-5. rake task list first 100 posts name
-6.crud actions for 8 controllers
-7. practice Active Record Query Interface
 
 To install JDK and JRE in ubuntu
 1.sudo add-apt-repository ppa:webupd8team/java
@@ -452,6 +296,169 @@ host    all             all             ::1/128                 trust
 #host    replication     postgres        ::1/128                 trust
 
 4.sudo /etc/init.d/postgresql restart
+
+
+
+
+#####################################################################
+1. microposts and comments sample pp in rails guide
+  a.migration for creating articles
+  b.migration for comments
+  a.model views controller for both articles and comments to implement crud actions
+  c. map associations
+  d.routing
+  e.insert sample data
+  f.Ui 
+  
+##defining a method
+
+1. method used to defined with a keyword called def
+2. method definition ends with a keyword called end
+3. if it is multi word all words shoud be seperated with _
+4.they shouldnot start with numbers , they can start with _ or alphabets
+ex::
+def sample
+  a="hellooo"
+  b="world"
+  puts a+" "+b  
+end
+
+def my_method11231
+end
+def current123_user
+end
+def load_user
+end
+
+def _current_use
+end
+
+3. claiing a method
+  ex:: sample
+
+## methods with arguments
+1.definition
+  def sample a,b
+    puts a+b 
+  end
+2.calling a method
+ex::
+
+   sample "hellloo","world"
+   sample 1,2
+
+## method with return type
+1. definition
+  
+def sample a,b
+    return a+b 
+end
+  
+2. calling a method
+result = sample 4,5
+
+puts result
+
+ 
+## method with return type without arguments
+
+   def sample
+     a=10
+     b=20 
+     return a+b 
+   end
+   result = sample
+   puts result
+
+## define a class
+1.first letter of a class should be capital letter
+2.if it is multi owrd it should be in a camalcase form
+
+class Post 
+  def sample
+    puts "this is sample method"
+  end 
+  def sample1
+    puts "this is sample1 method"
+  end 
+  def sample2
+    puts "this is sample2 method"
+  end 
+  def sample_3
+    puts "this is pradeep method"
+  end                                                                           
+end
+
+
+class Calculation 
+  def add
+    a=10
+    b=20
+    puts a+b
+  end 
+  def difference
+    a=10
+    b=20
+    puts a-b
+  end 
+  def multiply
+    a=10
+    b=20
+    puts a*b
+  end 
+  def division
+    a=10
+    b=20
+    puts a/b
+  end  
+  def all
+    add
+    difference
+    multiply
+    division
+  end                                                                         
+end
+
+
+class MicroPost
+end
+class CurrentUser
+end
+
+
+2. creating a object for class
+syntax:  variable = Classname.new
+  @post = Post.new
+
+creating a rails project::
+
+rails 2.x.x  2.0.0 2.3.5  2.3.7   ruby 1.8.x  1.8.6 1.8.7
+rails 3.x.x  3.0.0 3.2.3  3.2.1   ruby 1.9.x  1.9.2 1.9.1 1.9.3 minimum 1.8.7  
+rails 4.x.x  4.0.0 4.1.0  4.2.2   ruby 2.0.0n 2.2.2  minimum 1.9.3
+databases::  mysql  postgress/postgresql sqlite3(default)
+
+rvm use 2.0.0
+rvm gemset create sample_project
+rvm gemset use sample_project
+gem install rails -v 4.0.2
+rails new sample_5_dec -d mysql 
+subl .  -- to open project in sublime
+edit config/database.yml  place your root user password
+rake db:create
+rails s
+localhost:3000
+Gem::LoadError: Specified 'mysql2' for database adapter, but the gem is not loaded. Add `gem 'mysql2'` to your Gemfile
+
+gem 'mysql2', '~> 0.3.18'
+
+1. 8 controller models migrations  views routes and teir mapping
+2.rake task
+3. push code base to git
+4.deploy dms inspect date,mverso,venuedog
+5. rake task list first 100 posts name
+6.crud actions for 8 controllers
+7. practice Active Record Query Interface
+
 
 
 
@@ -1597,6 +1604,38 @@ http://ruby-doc.org/core-2.2.0/String.html
 
 
 
+23/12/2015::
 
+
+
+ruby on rails
+ruby :: programming language
+
+1.open source
+2.pure object oriented programming language
+3.dynamic programming language
+4.supports meta programming:: act of writing code which operates on code instead of operating on data.
+5.reflection
+
+Rails:: 
+1.is frame work which is completely written in ruby
+2.it sopports MVC(model  view controller) design pattern
+3. convetion over configuration,meta programming(scaffold,partials)
+4. applcation and web servers
+
+ruby       rails
+1.8.x  --> 2.x minimum 1.8.0
+1.9.x  --> 3.x minimum 1.8.7
+2.x(2.2.4) --> 4.x(4.2.5) minimum 1.9.3
+
+
+http://railscasts.com/episodes/253-carrierwave-file-uploads
+http://railscasts.com/episodes/234-simple-form
+http://railscasts.com/episodes/284-active-admin
+http://railscasts.com/episodes/209-introducing-devise
+http://railscasts.com/episodes/192-authorization-with-cancan
+http://railscasts.com/episodes/51-will-paginate
+http://railscasts.com/episodes/254-pagination-with-kaminari?view=asciicast
+http://railscasts.com/episodes/37-simple-search-form
 
 
