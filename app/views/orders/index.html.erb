@@ -1,13 +1,58 @@
-<table>
-  <tr>
-     <td>Id</td>
-     <td>Order Name</td>
+<table class='table table-hover' style='margin-left:30%;font-size=20px' id='order_list_table'>
+  <tr class='success'>
+     <td colspan="2">Id</td>
+     
      <td>Customer Name</td>
   </tr>
   <% @orders.each do |order| %>
-     <tr>
+     <tr class='danger'>
      <td><%= order.id %></td>
+
      <td><%= order.name %></td>
-     <td><%= order.customer.name %></td>
+     <td><%= order.customer.name  unless order.customer.nil? %></td>
   </tr>
   <% end %>
+ <ol>
+  <% @orders.each do |order| %>
+   
+     <li> <%= order.name %> </li>
+    
+  <% end %>
+</ol>
+<p id='first_paragraph ' class='sample_class'>
+</p>
+
+<div id='sample_div' class='sample_class'>
+</div>
+<p id ='sample'>sdfksdmnkf</p>  <br> 
+<p id ='sample1'>sdfjknsdfjksd </p>
+
+
+<table style="width:100%" class='test'>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Points</th>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table> 
+<br>
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+<script>
+    
+$(document).ready(function(){
+    // $("p").click(function(){
+    //     $(this).hide();
+    // });
+ $("#sample , #sample1").hide();
+ $(".test").hide(); 
+ // $("#sample1").hide();
+});
+</script>
